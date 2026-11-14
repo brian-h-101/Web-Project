@@ -16,18 +16,18 @@ const services = [
 ];
 export function Engineering() {
   return <>
-    <section className="page-heading"><h1>How This Portfolio Runs on AWS</h1><p>I built the portfolio interface and integrated its three demonstrations, configured Cloudflare DNS and AWS delivery, and implemented the build, review, publication and verification tooling.</p></section>
+    <section className="page-heading"><h1>How This Portfolio Runs on AWS</h1><p>I built the portfolio interface, integrated two live web demonstrations, and documented a reusable Godot framework. The site uses Amazon Route 53 for DNS and AWS services for hosting, application APIs, and data storage.</p></section>
     <nav className="section-nav" aria-label="Engineering sections">{[['Architecture','architecture'],['AWS service reference','services'],['Routing and access','http'],['Deployment','deployment']].map(([label,target])=><Link to={'#'+target} key={target}>{label}</Link>)}</nav>
     <section className="section" id="architecture" tabIndex={-1} aria-labelledby="portfolio-architecture-title">
       <span className="eyebrow">01 / ARCHITECTURE</span><h2 id="portfolio-architecture-title">System Architecture</h2>
-      <p className="section-intro">Cloudflare is the authoritative DNS provider. After DNS resolution, the browser connects to CloudFront over HTTPS. AWS hosts the static assets, application APIs and data.</p>
+      <p className="section-intro">Amazon Route 53 is the authoritative DNS provider. After DNS resolution, the browser connects to CloudFront over HTTPS. AWS hosts the static assets, application APIs, and data.</p>
       <Architecture label="Website delivery" caption="DNS resolution followed by HTTPS asset delivery" steps={[
         {name:'Public browser',description:'Resolve the portfolio hostname'},
-        {name:'Cloudflare DNS',description:'DNS-only records resolve to CloudFront'},
+        {name:'Amazon Route 53',description:'Alias records resolve the portfolio hostnames to CloudFront.'},
         {name:'CloudFront',description:'HTTPS, static caching and API routing'},
         {name:'Private website S3',description:'Portfolio and demo assets through origin access control'},
       ]}/>
-      <p className="diagram-note">DNS resolution precedes HTTPS. Cloudflare is not the application backend; Godot gameplay executes locally in the browser.</p>
+      <p className="diagram-note">Route 53 handles DNS resolution; CloudFront delivers website assets over HTTPS. Godot gameplay runs locally in the browser.</p>
       <div className="testing-grid">{projects.map(project=><section key={project.slug}><h3>{project.name}</h3><p>{project.demoKind==='commerce'?'Python services validate prices and commit orders/retry markers in DynamoDB against the shared catalog.':project.demoKind==='filesystem'?'Metadata and indexes live in DynamoDB; immutable document bodies use a private versioned S3 bucket.':'A versioned Godot Web export provides five examples with browser-local saves and no gameplay backend.'}</p><Link className="text-link" to={'/projects/'+project.slug+'#architecture'}>Explore this architecture →<span className="sr-only"> — {project.name}</span></Link></section>)}</div>
     </section>
     <section className="section" aria-labelledby="services-title"><span className="eyebrow">02 / SERVICES</span><details className="historical-records"><summary id="services"><h2 id="services-title">AWS service reference</h2></summary><p className="section-intro">Terraform retains DNS/certificate ownership; CDK/CloudFormation manages the website, two application backends and budget as separate stacks.</p><dl className="service-list">{services.map(([name,detail])=><div key={name}><dt>{name}</dt><dd>{detail}</dd></div>)}</dl></details></section>
@@ -45,7 +45,6 @@ export function Engineering() {
     <section className="section" id="deployment" tabIndex={-1} aria-labelledby="deployment-title">
       <span className="eyebrow">04 / DEPLOYMENT</span><h2 id="deployment-title">Build → Review → Publish → Verify</h2>
       <ol className="deployment-steps"><li><strong>Build</strong><p>Produce separate portfolio, Commerce and File-System browser bundles, then validate and stage the frozen Godot export and static documents.</p></li><li><strong>Review</strong><p>Compare all stack templates, source hashes and complete asset payloads. Offline synthesis and real-context live comparison are distinct checks.</p></li><li><strong>Publish</strong><p>Website releases exclusively target the existing website stack. Backend releases are separate operations; presentation changes preserve backend code, permissions, data and capacity.</p></li><li><strong>Verify</strong><p>Check actual deployed state and served bytes on both domains, then exercise the relevant browser behavior within its stated scope.</p></li></ol>
-      <aside className="note"><h3>Dated production evidence</h3><p>The October 26, 2026 public-order backend and website release passed independent stack, package and 50 served-file comparisons. Read-only standalone/embedded catalog and empty-history checks passed; populated live order creation/cancellation/replay and actual per-order midnight expiry were not tested in that release. The enabled product reset is separate from document retention and order expiry.</p><p>The CRPG case study records its October 25 gameplay acceptance separately from later byte-preservation checks.</p></aside>
     </section>
     <nav className="end-navigation" aria-label="Continue exploring"><Link className="text-link" to="/#projects">Explore the projects →</Link><Link className="text-link" to="/about">About Brian →</Link></nav>
   </>;

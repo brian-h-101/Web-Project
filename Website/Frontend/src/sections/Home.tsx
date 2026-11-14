@@ -16,7 +16,7 @@ export function Home() {
     </section>
     <section className="section split-section" aria-labelledby="engineering-title">
       <div><span className="eyebrow">02 / ENGINEERING</span><h2 id="engineering-title">How This Portfolio Runs</h2></div>
-      <div className="prose"><p>The portfolio brings together Cloudflare DNS, AWS hosting, two web applications, and a browser-based Godot game framework.</p><Link className="text-link" to="/engineering">Explore the hosting and deployment case study <span aria-hidden="true">→</span></Link></div>
+      <div className="prose"><p>The portfolio combines Amazon Route 53 DNS, AWS hosting, two live web applications, and a reusable Godot framework case study.</p><Link className="text-link" to="/engineering">Explore the hosting and deployment case study <span aria-hidden="true">→</span></Link></div>
     </section>
     <section className="section closing" aria-labelledby="next-title"><div><span className="eyebrow">03 / CONTACT</span><h2 id="next-title">Continue the Conversation</h2><p>For my background and project experience, view my résumé or get in touch.</p></div><div className="actions"><Link className="button button-secondary" to="/resume">View résumé</Link><Link className="text-link" to="/contact">Get in touch <span aria-hidden="true">→</span></Link></div></section>
   </>;

@@ -372,7 +372,7 @@ export const skills = [
   {
     "title": "Cloud and delivery",
     "summary": "AWS and infrastructure as code.",
-    "detail": "AWS CloudFront, S3, API Gateway, Lambda, DynamoDB, Cognito and IAM; CDK/CloudFormation, Terraform and Cloudflare DNS."
+    "detail": "AWS CloudFront, S3, API Gateway, Lambda, DynamoDB, Cognito and IAM; CDK/CloudFormation, Terraform and Amazon Route 53."
   },
   {
     "title": "Reliability and testing",
