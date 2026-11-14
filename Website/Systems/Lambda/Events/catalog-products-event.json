@@ -1,0 +1,17 @@
+{
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "GET",
+                                        "path":  "/api/catalog/products"
+                                    },
+                           "requestId":  "catalog-products-direct-test"
+                       },
+    "version":  "2.0",
+    "rawPath":  "/api/catalog/products",
+    "headers":  {
+
+                },
+    "isBase64Encoded":  false,
+    "routeKey":  "GET /api/catalog/products",
+    "rawQueryString":  ""
+}

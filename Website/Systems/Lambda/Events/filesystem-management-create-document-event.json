@@ -1,0 +1,18 @@
+{
+    "version":  "2.0",
+    "headers":  {
+                    "content-type":  "application/json; charset=utf-8"
+                },
+    "rawPath":  "/api/filesystem/manage/documents",
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "POST",
+                                        "path":  "/api/filesystem/manage/documents"
+                                    },
+                           "requestId":  "filesystem-management-create-document-direct-test"
+                       },
+    "routeKey":  "POST /api/filesystem/manage/documents",
+    "rawQueryString":  "",
+    "body":  "{\"content\":\"Shared visitor editing test.\\nStored in S3 with DynamoDB metadata.\\n\",\"format\":\"text\",\"name\":\"Management-check.txt\",\"parentId\":\"05177914-d220-4190-a0a8-4008a3be779c\"}",
+    "isBase64Encoded":  false
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "QueueName":  "exodus-catalog-reset-delivery-failures",
+        "QueueUrl":  "https://sqs.us-east-2.amazonaws.com/384635610196/exodus-catalog-reset-delivery-failures",
+        "QueueArn":  "arn:aws:sqs:us-east-2:384635610196:exodus-catalog-reset-delivery-failures",
+        "RetentionSeconds":  "1209600",
+        "SqsManagedSseEnabled":  "true"
+    },
+    {
+        "QueueName":  "exodus-catalog-reset-execution-failures",
+        "QueueUrl":  "https://sqs.us-east-2.amazonaws.com/384635610196/exodus-catalog-reset-execution-failures",
+        "QueueArn":  "arn:aws:sqs:us-east-2:384635610196:exodus-catalog-reset-execution-failures",
+        "RetentionSeconds":  "1209600",
+        "SqsManagedSseEnabled":  "true"
+    }
+]

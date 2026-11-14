@@ -1,0 +1,23 @@
+{
+    "Name":  "exodus-catalog-midnight",
+    "GroupName":  "exodus-catalog-reset",
+    "Description":  "Restore the Exodus sample product catalog at midnight Eastern time",
+    "ScheduleExpression":  "cron(0 0 * * ? *)",
+    "ScheduleExpressionTimezone":  "America/New_York",
+    "State":  "DISABLED",
+    "FlexibleTimeWindow":  {
+                               "Mode":  "OFF"
+                           },
+    "Target":  {
+                   "Input":  "{\"scheduled_time\":\"\u003caws.scheduler.scheduled-time\u003e\"}",
+                   "RoleArn":  "arn:aws:iam::384635610196:role/exodus-catalog-reset-scheduler-role",
+                   "RetryPolicy":  {
+                                       "MaximumEventAgeInSeconds":  3600,
+                                       "MaximumRetryAttempts":  2
+                                   },
+                   "DeadLetterConfig":  {
+                                            "Arn":  "arn:aws:sqs:us-east-2:384635610196:exodus-catalog-reset-delivery-failures"
+                                        },
+                   "Arn":  "arn:aws:lambda:us-east-2:384635610196:function:exodus-catalog-reset"
+               }
+}

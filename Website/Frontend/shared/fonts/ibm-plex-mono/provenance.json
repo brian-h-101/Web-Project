@@ -1,0 +1,188 @@
+{
+  "family": "IBM Plex Mono",
+  "package": "@ibm/plex-mono",
+  "version": "2.5.0",
+  "origin": {
+    "metadataUrl": "https://registry.npmjs.org/@ibm%2fplex-mono/2.5.0",
+    "tarballUrl": "https://registry.npmjs.org/@ibm/plex-mono/-/plex-mono-2.5.0.tgz",
+    "version": "2.5.0",
+    "gitHead": "2f9ba1b25957d958db71a849e85d72e3ecfb845a",
+    "bytes": 3125106,
+    "sha256": "55b5ffcfcd5e9db36ef2070b2b07a573434ca02c6f3be2b921c0b88fff29acad",
+    "integrity": "sha512-STBJIPxPomOYPmBMO7z5TKPJUotAF9u3gAUumTqVgwgrAO+K4FRNh0MlhsoJjKhJKsMbBJR10/bk4inkj/wc1w==",
+    "integrityVerified": true,
+    "packageScriptsExecuted": false
+  },
+  "officialRepository": "https://github.com/IBM/plex",
+  "officialReadme": "https://github.com/IBM/plex/tree/master/packages/plex-mono",
+  "files": [
+    {
+      "filename": "IBMPlexMono-Regular-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Regular-Latin1.woff2",
+      "weight": 400,
+      "style": "normal",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 17544,
+      "sha256": "e8993d946649b9d01abb1ed06d574b19d8ea3e66b5c3948602db335c44c18e56"
+    },
+    {
+      "filename": "IBMPlexMono-Regular-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Regular-Pi.woff2",
+      "weight": 400,
+      "style": "normal",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 13780,
+      "sha256": "b8002770aa636f544ba43e124da6a227301769754f295eae26e16475b469c767"
+    },
+    {
+      "filename": "IBMPlexMono-Italic-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Italic-Latin1.woff2",
+      "weight": 400,
+      "style": "italic",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 19556,
+      "sha256": "242f6417615190011bad9e6125180e356f9f9710186238784659927fbaf7ce76"
+    },
+    {
+      "filename": "IBMPlexMono-Italic-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Italic-Pi.woff2",
+      "weight": 400,
+      "style": "italic",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 14216,
+      "sha256": "aefe760c6064b3d76a8d808bc5b1171a2888549033b57a5ddb17ca25057b2ddf"
+    },
+    {
+      "filename": "IBMPlexMono-Medium-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Medium-Latin1.woff2",
+      "weight": 500,
+      "style": "normal",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 17868,
+      "sha256": "41201b658a328b9d00368215c2f1102770f80b15952ab82631e4006255e6365d"
+    },
+    {
+      "filename": "IBMPlexMono-Medium-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Medium-Pi.woff2",
+      "weight": 500,
+      "style": "normal",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 13968,
+      "sha256": "92bd18415e8c43a2569f615e4e84a94b1b1c4e0377ba9d8f4d894bbf6ffcc39d"
+    },
+    {
+      "filename": "IBMPlexMono-MediumItalic-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-MediumItalic-Latin1.woff2",
+      "weight": 500,
+      "style": "italic",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 19516,
+      "sha256": "199d444d6b87e36131c3203827cde42fa81fa0de6348127d1f3a8e85b02a2e75"
+    },
+    {
+      "filename": "IBMPlexMono-MediumItalic-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-MediumItalic-Pi.woff2",
+      "weight": 500,
+      "style": "italic",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 14340,
+      "sha256": "96f3e693a2aafb7e14e6db1ae2129d017f48497be7084ff7aa632c0c4821bf0d"
+    },
+    {
+      "filename": "IBMPlexMono-SemiBold-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-SemiBold-Latin1.woff2",
+      "weight": 600,
+      "style": "normal",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 17872,
+      "sha256": "b7acd05041ab65f3b7039e218ddd893065e11a07e85ea85019473152a51b6b7d"
+    },
+    {
+      "filename": "IBMPlexMono-SemiBold-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-SemiBold-Pi.woff2",
+      "weight": 600,
+      "style": "normal",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 13872,
+      "sha256": "1637166246d386507b1351d59ddda93b732f781d06c0a6574e486104a00897b1"
+    },
+    {
+      "filename": "IBMPlexMono-SemiBoldItalic-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-SemiBoldItalic-Latin1.woff2",
+      "weight": 600,
+      "style": "italic",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 19732,
+      "sha256": "29abbc619e1e51017ba7874d8f1f29c42496d6d0518b9b2c892fc893b894e052"
+    },
+    {
+      "filename": "IBMPlexMono-SemiBoldItalic-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-SemiBoldItalic-Pi.woff2",
+      "weight": 600,
+      "style": "italic",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 14236,
+      "sha256": "bc7ec22238b06d4e65fa2d38fa8dcc9eb2a06a62450e2d89e62c2be926bc28c4"
+    },
+    {
+      "filename": "IBMPlexMono-Bold-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Bold-Latin1.woff2",
+      "weight": 700,
+      "style": "normal",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 17860,
+      "sha256": "e256c6e8225a8792d0274ac83ead8d668b3c0668f9bd8d36a57a56594ef777e5"
+    },
+    {
+      "filename": "IBMPlexMono-Bold-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-Bold-Pi.woff2",
+      "weight": 700,
+      "style": "normal",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 13892,
+      "sha256": "57ff89ecf1d1eaef3dad7eeb6f6a83bb4033ed070dff9cb81f2c5b037830a6bb"
+    },
+    {
+      "filename": "IBMPlexMono-BoldItalic-Latin1.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-BoldItalic-Latin1.woff2",
+      "weight": 700,
+      "style": "italic",
+      "subset": "Latin1",
+      "unicodeRange": "U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02",
+      "bytes": 19676,
+      "sha256": "d6f06826a85255c7151805949ec2089bb20c9367818e1923ff3c24fafb873608"
+    },
+    {
+      "filename": "IBMPlexMono-BoldItalic-Pi.woff2",
+      "packageMember": "package/fonts/split/woff2/IBMPlexMono-BoldItalic-Pi.woff2",
+      "weight": 700,
+      "style": "italic",
+      "subset": "Pi",
+      "unicodeRange": "U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD",
+      "bytes": 14272,
+      "sha256": "888053bb5b16ea0cf34387409a8092438008a8c9c40fef62163a97173e08218d"
+    }
+  ],
+  "license": {
+    "filename": "LICENSE.txt",
+    "packageMember": "package/LICENSE.txt",
+    "bytes": 4456,
+    "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  "selection": "Latin1 covers existing Latin text, accented labels and punctuation; Pi supplies arrows, check marks and technical symbols. Other glyphs retain system monospace fallbacks. Static normal/italic 400/500/600/700 faces cover UI and authored Markdown emphasis; no synthesized styles, variable-font declaration or package scripts.",
+  "modifiedFontBytes": false
+}

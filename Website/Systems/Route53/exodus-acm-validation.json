@@ -1,0 +1,31 @@
+{
+    "Changes":  [
+                    {
+                        "ResourceRecordSet":  {
+                                                  "TTL":  300,
+                                                  "Name":  "_36482eeb9bd453624157cd2d60e28c3b.brianho101-portfolio.com.",
+                                                  "Type":  "CNAME",
+                                                  "ResourceRecords":  [
+                                                                          {
+                                                                              "Value":  "_bb84e10a3da34b55ee74485f976e2093.wzccmgtwzk.acm-validations.aws."
+                                                                          }
+                                                                      ]
+                                              },
+                        "Action":  "UPSERT"
+                    },
+                    {
+                        "ResourceRecordSet":  {
+                                                  "TTL":  300,
+                                                  "Name":  "_48d98f14d65b7bece69554be879c05d2.www.brianho101-portfolio.com.",
+                                                  "Type":  "CNAME",
+                                                  "ResourceRecords":  [
+                                                                          {
+                                                                              "Value":  "_b12c985da998335b11712991090dbe19.wzccmgtwzk.acm-validations.aws."
+                                                                          }
+                                                                      ]
+                                              },
+                        "Action":  "UPSERT"
+                    }
+                ],
+    "Comment":  "ACM DNS validation for Exodus portfolio"
+}

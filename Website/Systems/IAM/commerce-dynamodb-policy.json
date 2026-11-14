@@ -1,0 +1,43 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadAndUpdateOrders",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:UpdateItem"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-commerce-orders"
+    },
+    {
+      "Sid": "CreateOrdersTransactionally",
+      "Effect": "Allow",
+      "Action": "dynamodb:PutItem",
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-commerce-orders",
+      "Condition": {
+        "ForAnyValue:StringEquals": {
+          "dynamodb:EnclosingOperation": [
+            "TransactWriteItems"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ReadOrderHistory",
+      "Effect": "Allow",
+      "Action": "dynamodb:Query",
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-commerce-orders/index/SessionHistory"
+    },
+    {
+      "Sid": "ReadAndValidateSharedCatalog",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:Query",
+        "dynamodb:ConditionCheckItem"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog"
+    }
+  ]
+}

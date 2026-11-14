@@ -1,0 +1,59 @@
+/* Résumé sizes stay local; the shared browser font also governs document text. */
+.resume-view { padding-block: 24px 48px; }
+.resume-view .resume-actions { max-width: 8.5in; margin: 0 auto 24px; }
+.resume-document { font-family: var(--theme-font); font-size: 9pt; line-height: 1.2; color: var(--theme-text); }
+.resume-page { display: flex; flex-direction: column; width: 100%; max-width: 8.5in; min-height: 11in; margin: 0 auto 24px; padding: 36pt 36pt 10pt; background: var(--theme-background); box-shadow: 0 2px 12px var(--theme-shadow); }
+.resume-page + .resume-page { padding-top: 15pt; }
+.resume-document p { color: inherit; }
+.resume-header { text-align: center; margin-bottom: 4pt; }
+.resume-header h1 { font-family: var(--theme-font); font-size: 16pt; line-height: 1.2; font-weight: 700; letter-spacing: 0; color: var(--theme-link); margin: 0 0 19pt; }
+.resume-header address { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 3pt; font-family: var(--theme-font); font-size: 10.5pt; font-style: normal; font-weight: 700; }
+.resume-header a { color: var(--theme-link); text-decoration: none; }
+.resume-header a:hover { color: var(--theme-link-hover); text-decoration: underline; }
+.resume-document h2 { margin: 4pt 0 2pt; padding-bottom: 1pt; border-bottom: .5pt solid var(--theme-border); font-family: var(--theme-font); font-size: 10.5pt; line-height: 1.1; letter-spacing: 0; font-weight: 700; text-transform: uppercase; color: var(--theme-link); }
+.resume-document h3 { display: inline; font-family: var(--theme-font); font-size: 9.5pt; line-height: inherit; letter-spacing: 0; font-weight: 700; color: var(--theme-link); }
+.resume-entry-heading em { font-family: var(--theme-font); font-size: 8pt; color: var(--theme-link); }
+.resume-entry + .resume-entry { margin-top: 3pt; }
+.resume-skills { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 12pt; margin: 0; font-size: 8.5pt; }
+.resume-skills dt { font-weight: 700; }
+.resume-skills dd { margin: 0; }
+.resume-development { margin-top: 13pt; }
+.resume-document ul { list-style: disc; margin: 0; padding-left: 12pt; }
+.resume-document ul ul { list-style: circle; padding-left: 15pt; }
+.resume-document strong { font-weight: 700; }
+.resume-coursework { display: grid; grid-template-columns: 1.1fr 1.9fr 1.15fr; gap: 6pt; margin-top: 3pt; }
+.resume-coursework ul { list-style: none; padding: 0; line-height: 1.4; }
+
+@media screen and (max-width: 850px) {
+  .resume-document { font-size: 1rem; line-height: 1.45; }
+  .resume-page, .resume-page + .resume-page { padding: 24px; min-height: auto; }
+  .resume-header h1 { font-size: 1.75rem; margin-bottom: 16px; }
+  .resume-header address { font-size: 1rem; gap: 8px; }
+  .resume-document h2 { font-size: 1.1rem; margin-top: 20px; }
+  .resume-document h3 { font-size: 1rem; }
+  .resume-entry-heading em { font-size: .9rem; }
+  .resume-skills { font-size: 1rem; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .resume-skills dd { margin-bottom: 8px; }
+  .resume-entry-heading em { display: block; }
+  .resume-document li + li { margin-top: 6px; }
+  .resume-document ul { padding-left: 18px; }
+  .resume-coursework { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .resume-coursework ul { padding: 0; }
+  .resume-coursework ul + ul { margin-top: 6px; }
+  .resume-document { overflow-wrap: anywhere; }
+}
+
+@page resume { size: letter; margin: .5in; }
+@media print {
+  body:has(.resume-view) .site-header,
+  body:has(.resume-view) .site-footer,
+  body:has(.resume-view) .skip-link,
+  .resume-view .resume-actions { display: none; }
+  body:has(.resume-view) main { width: auto; margin: 0; }
+  .resume-view { padding: 0; }
+  /* Font reflow determines physical pages; visual groups are not page numbers. */
+  .resume-page { display: block; page: resume; width: auto; max-width: none; min-height: 0; margin: 0; padding: 0; box-shadow: none; break-after: auto; }
+  .resume-page + .resume-page { padding: 0; margin-top: 8pt; }
+  .resume-document h2, .resume-entry-heading { break-after: avoid; }
+  .resume-document li { break-inside: avoid; }
+}

@@ -1,0 +1,7 @@
+{
+  "QueueName": "exodus-catalog-reset-delivery-failures",
+  "Attributes": {
+    "MessageRetentionPeriod": "1209600",
+    "SqsManagedSseEnabled": "true"
+  }
+}

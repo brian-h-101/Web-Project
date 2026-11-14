@@ -1,0 +1,18 @@
+{
+    "version":  "2.0",
+    "headers":  {
+                    "content-type":  "application/json; charset=utf-8"
+                },
+    "rawPath":  "/api/filesystem/manage/nodes/05177914-d220-4190-a0a8-4008a3be779c",
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "DELETE",
+                                        "path":  "/api/filesystem/manage/nodes/05177914-d220-4190-a0a8-4008a3be779c"
+                                    },
+                           "requestId":  "filesystem-management-delete-test-folder-direct-test"
+                       },
+    "routeKey":  "DELETE /api/filesystem/manage/nodes/05177914-d220-4190-a0a8-4008a3be779c",
+    "rawQueryString":  "",
+    "body":  "{\"expectedRevision\":1}",
+    "isBase64Encoded":  false
+}

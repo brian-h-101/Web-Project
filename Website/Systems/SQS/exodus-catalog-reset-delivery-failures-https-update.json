@@ -1,0 +1,6 @@
+{
+    "QueueUrl":  "https://sqs.us-east-2.amazonaws.com/384635610196/exodus-catalog-reset-delivery-failures",
+    "Attributes":  {
+                       "Policy":  "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"sqs:*\",\"Condition\":{\"Bool\":{\"aws:SecureTransport\":\"false\"}},\"Principal\":\"*\",\"Resource\":\"arn:aws:sqs:us-east-2:384635610196:exodus-catalog-reset-delivery-failures\",\"Effect\":\"Deny\",\"Sid\":\"DenyInsecureTransport\"}]}"
+                   }
+}

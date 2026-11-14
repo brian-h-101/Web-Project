@@ -1,0 +1,23 @@
+{
+    "AlarmName":  "exodus-catalog-reset-delivery-failures",
+    "AlarmDescription":  "Inspect retained Scheduler delivery failure records.",
+    "Namespace":  "AWS/SQS",
+    "MetricName":  "ApproximateNumberOfMessagesVisible",
+    "Dimensions":  [
+                       {
+                           "Value":  "exodus-catalog-reset-delivery-failures",
+                           "Name":  "QueueName"
+                       }
+                   ],
+    "Statistic":  "Maximum",
+    "Unit":  "Count",
+    "Period":  300,
+    "EvaluationPeriods":  1,
+    "DatapointsToAlarm":  1,
+    "Threshold":  1,
+    "ComparisonOperator":  "GreaterThanOrEqualToThreshold",
+    "TreatMissingData":  "notBreaching",
+    "AlarmActions":  [
+
+                     ]
+}

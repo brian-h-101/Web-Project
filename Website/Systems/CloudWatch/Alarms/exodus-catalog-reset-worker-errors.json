@@ -1,0 +1,23 @@
+{
+    "AlarmName":  "exodus-catalog-reset-worker-errors",
+    "AlarmDescription":  "Inspect reset Lambda logs for execution errors.",
+    "Namespace":  "AWS/Lambda",
+    "MetricName":  "Errors",
+    "Dimensions":  [
+                       {
+                           "Value":  "exodus-catalog-reset",
+                           "Name":  "FunctionName"
+                       }
+                   ],
+    "Statistic":  "Sum",
+    "Unit":  "Count",
+    "Period":  300,
+    "EvaluationPeriods":  1,
+    "DatapointsToAlarm":  1,
+    "Threshold":  1,
+    "ComparisonOperator":  "GreaterThanOrEqualToThreshold",
+    "TreatMissingData":  "notBreaching",
+    "AlarmActions":  [
+
+                     ]
+}

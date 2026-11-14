@@ -1,0 +1,18 @@
+{
+    "version":  "2.0",
+    "headers":  {
+                    "content-type":  "application/json; charset=utf-8"
+                },
+    "rawPath":  "/api/filesystem/manage/folders",
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "POST",
+                                        "path":  "/api/filesystem/manage/folders"
+                                    },
+                           "requestId":  "filesystem-management-create-folder-direct-test"
+                       },
+    "routeKey":  "POST /api/filesystem/manage/folders",
+    "rawQueryString":  "",
+    "body":  "{\"name\":\"Management-check-9bd08b23\",\"parentId\":\"root\"}",
+    "isBase64Encoded":  false
+}

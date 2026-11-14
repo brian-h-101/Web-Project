@@ -1,0 +1,23 @@
+{
+    "AlarmName":  "exodus-catalog-reset-destination-delivery-failures",
+    "AlarmDescription":  "Lambda could not deliver an asynchronous failure record.",
+    "Namespace":  "AWS/Lambda",
+    "MetricName":  "DestinationDeliveryFailures",
+    "Dimensions":  [
+                       {
+                           "Value":  "exodus-catalog-reset",
+                           "Name":  "FunctionName"
+                       }
+                   ],
+    "Statistic":  "Sum",
+    "Unit":  "Count",
+    "Period":  300,
+    "EvaluationPeriods":  1,
+    "DatapointsToAlarm":  1,
+    "Threshold":  1,
+    "ComparisonOperator":  "GreaterThanOrEqualToThreshold",
+    "TreatMissingData":  "notBreaching",
+    "AlarmActions":  [
+
+                     ]
+}

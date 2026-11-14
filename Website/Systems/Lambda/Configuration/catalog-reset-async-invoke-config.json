@@ -1,0 +1,10 @@
+{
+  "FunctionName": "exodus-catalog-reset",
+  "MaximumRetryAttempts": 2,
+  "MaximumEventAgeInSeconds": 3600,
+  "DestinationConfig": {
+    "OnFailure": {
+      "Destination": "arn:aws:sqs:us-east-2:384635610196:exodus-catalog-reset-execution-failures"
+    }
+  }
+}

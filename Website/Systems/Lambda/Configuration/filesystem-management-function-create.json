@@ -1,0 +1,30 @@
+{
+    "FunctionName":  "exodus-filesystem-management",
+    "Description":  "Shared visitor editing for the Exodus FileSystem and product catalog",
+    "Runtime":  "python3.12",
+    "Handler":  "management_handler.handler",
+    "Role":  "arn:aws:iam::384635610196:role/exodus-filesystem-management-role",
+    "PackageType":  "Zip",
+    "Architectures":  [
+                          "x86_64"
+                      ],
+    "MemorySize":  256,
+    "Timeout":  20,
+    "Environment":  {
+                        "Variables":  {
+                                          "CATALOG_TABLE":  "exodus-shared-catalog",
+                                          "DOCUMENT_BUCKET":  "exodus-filesystem-documents-384635610196-us-east-2",
+                                          "FILESYSTEM_TABLE":  "exodus-filesystem-metadata",
+                                          "CATALOG_CONTRACT":  "generation-v1",
+                                          "PUBLIC_SHARED_MANAGEMENT_ENABLED":  "true"
+                                      }
+                    },
+    "LoggingConfig":  {
+                          "LogGroup":  "/aws/lambda/exodus-filesystem-management",
+                          "LogFormat":  "Text"
+                      },
+    "Tags":  {
+                 "Project":  "Exodus",
+                 "Component":  "FileSystemManagement"
+             }
+}

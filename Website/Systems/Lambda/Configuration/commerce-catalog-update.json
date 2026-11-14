@@ -1,0 +1,12 @@
+{
+    "FunctionName":  "exodus-commerce",
+    "RevisionId":  "de9f2cd6-e903-4359-bb55-29bb91dde715",
+    "Environment":  {
+                        "Variables":  {
+                                          "TABLE_NAME":  "exodus-commerce-orders",
+                                          "CATALOG_TABLE":  "exodus-shared-catalog",
+                                          "CATALOG_MODE":  "dynamodb",
+                                          "ORDER_CONTRACT":  "public-orders-v1"
+                                      }
+                    }
+}

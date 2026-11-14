@@ -1,0 +1,19 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Action":  "s3:GetObject",
+                          "Condition":  {
+                                            "StringEquals":  {
+                                                                 "AWS:SourceArn":  "arn:aws:cloudfront::384635610196:distribution/E3M9GEX0LQHSED"
+                                                             }
+                                        },
+                          "Principal":  {
+                                            "Service":  "cloudfront.amazonaws.com"
+                                        },
+                          "Resource":  "arn:aws:s3:::exodus-portfolio-web-384635610196-us-east-2/*",
+                          "Effect":  "Allow",
+                          "Sid":  "AllowExodusCloudFrontRead"
+                      }
+                  ]
+}

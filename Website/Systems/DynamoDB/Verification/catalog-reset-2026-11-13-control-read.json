@@ -1,0 +1,12 @@
+{
+    "Key":  {
+                "SK":  {
+                           "S":  "META"
+                       },
+                "PK":  {
+                           "S":  "CONTROL"
+                       }
+            },
+    "TableName":  "exodus-shared-catalog",
+    "ConsistentRead":  true
+}

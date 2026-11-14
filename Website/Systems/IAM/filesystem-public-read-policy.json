@@ -1,0 +1,23 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "ReadCatalogAndFileSystemMetadata",
+                          "Resource":  [
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog",
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-filesystem-metadata"
+                                       ],
+                          "Action":  [
+                                         "dynamodb:GetItem",
+                                         "dynamodb:Query"
+                                     ]
+                      },
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "ReadDocumentVersions",
+                          "Resource":  "arn:aws:s3:::exodus-filesystem-documents-384635610196-us-east-2/documents/*",
+                          "Action":  "s3:GetObjectVersion"
+                      }
+                  ]
+}

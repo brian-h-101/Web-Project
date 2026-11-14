@@ -1,0 +1,62 @@
+[
+  {
+    "sku": "PRODUCT-001",
+    "action": "CREATE",
+    "proposed": {
+      "sku": "PRODUCT-001",
+      "name": "Everyday notebook",
+      "unit_price": "12.50",
+      "currency": "USD",
+      "description": "Original non-commercial Commerce demonstration product.",
+      "status": "PUBLISHED"
+    }
+  },
+  {
+    "sku": "PRODUCT-002",
+    "action": "CREATE",
+    "proposed": {
+      "sku": "PRODUCT-002",
+      "name": "Studio mug",
+      "unit_price": "18.00",
+      "currency": "USD",
+      "description": "Original non-commercial Commerce demonstration product.",
+      "status": "PUBLISHED"
+    }
+  },
+  {
+    "sku": "PRODUCT-003",
+    "action": "CREATE",
+    "proposed": {
+      "sku": "PRODUCT-003",
+      "name": "Canvas tote",
+      "unit_price": "24.00",
+      "currency": "USD",
+      "description": "Original non-commercial Commerce demonstration product.",
+      "status": "PUBLISHED"
+    }
+  },
+  {
+    "sku": "PRODUCT-004",
+    "action": "CREATE",
+    "proposed": {
+      "sku": "PRODUCT-004",
+      "name": "Brass pen",
+      "unit_price": "9.75",
+      "currency": "USD",
+      "description": "Original non-commercial Commerce demonstration product.",
+      "status": "PUBLISHED"
+    }
+  },
+  {
+    "sku": "PRODUCT-005",
+    "action": "CREATE",
+    "proposed": {
+      "sku": "PRODUCT-005",
+      "name": "Desk lamp",
+      "unit_price": "48.00",
+      "currency": "USD",
+      "description": "Original non-commercial Commerce demonstration product.",
+      "status": "PUBLISHED"
+    }
+  }
+]

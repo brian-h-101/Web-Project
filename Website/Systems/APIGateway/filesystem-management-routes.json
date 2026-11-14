@@ -1,0 +1,146 @@
+[
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/catalog/manage/products",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/catalog/manage/products/{sku}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/catalog/manage/tags",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/catalog/manage/search",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/root",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/nodes/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/nodes/{id}/children",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/documents",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/documents/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/documents/{id}/content",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/documents/{id}/download",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "GET /api/filesystem/manage/search",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/catalog/manage/products",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "PATCH /api/catalog/manage/products/{sku}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/catalog/manage/tags",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "PATCH /api/catalog/manage/tags/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "DELETE /api/catalog/manage/tags/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/filesystem/manage/folders",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/filesystem/manage/documents",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "PATCH /api/filesystem/manage/documents/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "PATCH /api/filesystem/manage/nodes/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "DELETE /api/filesystem/manage/nodes/{id}",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/filesystem/manage/nodes/{id}/move",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    },
+    {
+        "ApiId":  "4b0x78ovwb",
+        "RouteKey":  "POST /api/filesystem/manage/nodes/{id}/copy",
+        "AuthorizationType":  "NONE",
+        "Target":  "integrations/3mc5c2g"
+    }
+]

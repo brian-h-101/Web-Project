@@ -1,0 +1,17 @@
+{
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "GET",
+                                        "path":  "/api/filesystem/root"
+                                    },
+                           "requestId":  "filesystem-root-direct-test"
+                       },
+    "version":  "2.0",
+    "rawPath":  "/api/filesystem/root",
+    "headers":  {
+
+                },
+    "isBase64Encoded":  false,
+    "routeKey":  "GET /api/filesystem/root",
+    "rawQueryString":  ""
+}

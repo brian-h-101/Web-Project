@@ -1,0 +1,17 @@
+{
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "GET",
+                                        "path":  "/api/filesystem/health"
+                                    },
+                           "requestId":  "filesystem-health-direct-test"
+                       },
+    "version":  "2.0",
+    "rawPath":  "/api/filesystem/health",
+    "headers":  {
+
+                },
+    "isBase64Encoded":  false,
+    "routeKey":  "GET /api/filesystem/health",
+    "rawQueryString":  ""
+}

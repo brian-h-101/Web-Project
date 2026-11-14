@@ -1,0 +1,30 @@
+{
+  "version": "shared-content-v1",
+  "permissions": ["nodes:read", "nodes:create", "nodes:update", "nodes:delete", "documents:read", "documents:create", "documents:update_any", "documents:tag_any", "documents:delete", "tags:create", "tags:manage", "catalog:write"],
+  "routes": [
+    {"method":"GET","path":"/api/catalog/products"},
+    {"method":"GET","path":"/api/catalog/products/{sku}"},
+    {"method":"GET","path":"/api/catalog/tags"},
+    {"method":"GET","path":"/api/catalog/search"},
+    {"method":"GET","path":"/api/filesystem/root"},
+    {"method":"GET","path":"/api/filesystem/nodes/{id}"},
+    {"method":"GET","path":"/api/filesystem/nodes/{id}/children"},
+    {"method":"GET","path":"/api/filesystem/documents"},
+    {"method":"GET","path":"/api/filesystem/documents/{id}"},
+    {"method":"GET","path":"/api/filesystem/documents/{id}/content"},
+    {"method":"GET","path":"/api/filesystem/documents/{id}/download"},
+    {"method":"GET","path":"/api/filesystem/search"},
+    {"method":"POST","path":"/api/catalog/products","permission":"catalog:write"},
+    {"method":"PATCH","path":"/api/catalog/products/{sku}","permission":"catalog:write"},
+    {"method":"POST","path":"/api/catalog/tags","permission":"tags:create"},
+    {"method":"PATCH","path":"/api/catalog/tags/{id}","permission":"tags:manage"},
+    {"method":"DELETE","path":"/api/catalog/tags/{id}","permission":"tags:manage"},
+    {"method":"POST","path":"/api/filesystem/folders","permission":"nodes:create"},
+    {"method":"POST","path":"/api/filesystem/documents","permission":"documents:create"},
+    {"method":"PATCH","path":"/api/filesystem/documents/{id}","permission":"documents:update_any"},
+    {"method":"PATCH","path":"/api/filesystem/nodes/{id}","permission":"nodes:update"},
+    {"method":"DELETE","path":"/api/filesystem/nodes/{id}","permission":"nodes:delete"},
+    {"method":"POST","path":"/api/filesystem/nodes/{id}/move","permission":"nodes:update"},
+    {"method":"POST","path":"/api/filesystem/nodes/{id}/copy","permission":"nodes:create"}
+  ]
+}

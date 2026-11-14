@@ -1,0 +1,17 @@
+{
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "GET",
+                                        "path":  "/api/filesystem/documents/f0d6d814-9c36-4c5e-b1b6-be19de578878/content"
+                                    },
+                           "requestId":  "filesystem-document-content-direct-test"
+                       },
+    "version":  "2.0",
+    "rawPath":  "/api/filesystem/documents/f0d6d814-9c36-4c5e-b1b6-be19de578878/content",
+    "headers":  {
+
+                },
+    "isBase64Encoded":  false,
+    "routeKey":  "GET /api/filesystem/documents/{id}/content",
+    "rawQueryString":  ""
+}

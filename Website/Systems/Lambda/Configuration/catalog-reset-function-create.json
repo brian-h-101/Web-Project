@@ -1,0 +1,20 @@
+{
+  "FunctionName": "exodus-catalog-reset",
+  "Runtime": "python3.12",
+  "Role": "arn:aws:iam::384635610196:role/exodus-catalog-reset-role",
+  "Handler": "reset_worker.handler",
+  "Description": "Restore the Exodus sample product catalog once per scheduled day",
+  "Timeout": 120,
+  "MemorySize": 128,
+  "PackageType": "Zip",
+  "Architectures": ["x86_64"],
+  "Environment": {
+    "Variables": {
+      "CATALOG_TABLE": "exodus-shared-catalog"
+    }
+  },
+  "LoggingConfig": {
+    "LogFormat": "Text",
+    "LogGroup": "/aws/lambda/exodus-catalog-reset"
+  }
+}

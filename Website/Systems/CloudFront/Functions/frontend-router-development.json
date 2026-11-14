@@ -1,0 +1,17 @@
+{
+    "ETag": "E3UN6WX5RRO2AG",
+    "FunctionSummary": {
+        "Name": "exodus-portfolio-frontend-router",
+        "Status": "DEPLOYED",
+        "FunctionConfig": {
+            "Comment": "Rewrite portfolio React page routes to /index.html",
+            "Runtime": "cloudfront-js-2.0"
+        },
+        "FunctionMetadata": {
+            "FunctionARN": "arn:aws:cloudfront::384635610196:function/exodus-portfolio-frontend-router",
+            "Stage": "DEVELOPMENT",
+            "CreatedTime": "2026-11-12T17:56:31.897000+00:00",
+            "LastModifiedTime": "2026-11-12T23:20:29.936000+00:00"
+        }
+    }
+}

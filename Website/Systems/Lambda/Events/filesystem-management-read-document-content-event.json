@@ -1,0 +1,17 @@
+{
+    "requestContext":  {
+                           "http":  {
+                                        "method":  "GET",
+                                        "path":  "/api/filesystem/manage/documents/30ce0b53-a57a-471d-b07e-d53245c08dca/content"
+                                    },
+                           "requestId":  "filesystem-management-read-document-content-direct-test"
+                       },
+    "version":  "2.0",
+    "rawPath":  "/api/filesystem/manage/documents/30ce0b53-a57a-471d-b07e-d53245c08dca/content",
+    "headers":  {
+                    "content-type":  "application/json; charset=utf-8"
+                },
+    "isBase64Encoded":  false,
+    "routeKey":  "GET /api/filesystem/manage/documents/30ce0b53-a57a-471d-b07e-d53245c08dca/content",
+    "rawQueryString":  ""
+}

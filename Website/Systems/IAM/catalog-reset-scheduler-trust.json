@@ -1,0 +1,21 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "AllowCatalogResetScheduler",
+                          "Principal":  {
+                                            "Service":  "scheduler.amazonaws.com"
+                                        },
+                          "Condition":  {
+                                            "ArnEquals":  {
+                                                              "aws:SourceArn":  "arn:aws:scheduler:us-east-2:384635610196:schedule-group/exodus-catalog-reset"
+                                                          },
+                                            "StringEquals":  {
+                                                                 "aws:SourceAccount":  "384635610196"
+                                                             }
+                                        },
+                          "Action":  "sts:AssumeRole"
+                      }
+                  ]
+}

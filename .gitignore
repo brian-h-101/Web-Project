@@ -1,0 +1,31 @@
+# Private local folders and environment settings
+/Credentials/
+/Historical/
+.aws/
+.env
+.env.*
+!.env.example
+
+# Installed dependencies
+node_modules/
+.venv*/
+venv/
+
+# Generated builds and Python caches
+dist/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+coverage/
+
+# Generated AWS packages, snapshots, and local results
+/Website/Systems/Lambda/Packages/
+/Website/Systems/Lambda/Staging/
+/Website/Systems/Lambda/Responses/
+/Website/Systems/CloudFront/Snapshots/
+/Website/Systems/CloudFront/Updates/
+/Website/Systems/Local/
+
+# Personal budget notification settings
+/Website/Systems/Budgets/exodus-monthly-budget-request.json

@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /api/orders",
+  "rawPath": "/api/orders",
+  "rawQueryString": "",
+  "headers": {},
+  "requestContext": {
+    "requestId": "commerce-orders-direct-test",
+    "routeKey": "GET /api/orders",
+    "http": {
+      "method": "GET",
+      "path": "/api/orders"
+    }
+  },
+  "isBase64Encoded": false
+}

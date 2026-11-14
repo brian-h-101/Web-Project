@@ -1,0 +1,7 @@
+{
+  "TableName": "exodus-commerce-orders",
+  "TimeToLiveSpecification": {
+    "Enabled": true,
+    "AttributeName": "expires_at"
+  }
+}

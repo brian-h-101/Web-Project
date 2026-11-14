@@ -1,0 +1,13 @@
+{
+    "FunctionName":  "exodus-filesystem-public",
+    "RevisionId":  "e25ae87a-bea7-4852-b9da-c76fdcef7118",
+    "Environment":  {
+                        "Variables":  {
+                                          "CATALOG_TABLE":  "exodus-shared-catalog",
+                                          "FILESYSTEM_TABLE":  "exodus-filesystem-metadata",
+                                          "DOCUMENT_BUCKET":  "exodus-filesystem-documents-384635610196-us-east-2",
+                                          "CATALOG_CONTRACT":  "generation-v1",
+                                          "PUBLIC_SHARED_MANAGEMENT_ENABLED":  "true"
+                                      }
+                    }
+}

@@ -1,0 +1,12 @@
+{
+    "Key":  {
+                "SK":  {
+                           "S":  "META"
+                       },
+                "PK":  {
+                           "S":  "RESET#2026-11-13"
+                       }
+            },
+    "TableName":  "exodus-shared-catalog",
+    "ConsistentRead":  true
+}

@@ -1,0 +1,11 @@
+{
+    "ApiEndpoint":  "https://4b0x78ovwb.execute-api.us-east-2.amazonaws.com",
+    "ApiId":  "4b0x78ovwb",
+    "ApiKeySelectionExpression":  "$request.header.x-api-key",
+    "CreatedDate":  "2026-11-12T14:04:41+00:00",
+    "DisableExecuteApiEndpoint":  false,
+    "IpAddressType":  "ipv4",
+    "Name":  "exodus-portfolio-api",
+    "ProtocolType":  "HTTP",
+    "RouteSelectionExpression":  "$request.method $request.path"
+}

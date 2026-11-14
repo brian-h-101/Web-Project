@@ -1,0 +1,88 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "ReadSharedWorkspace",
+                          "Resource":  [
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog",
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-filesystem-metadata"
+                                       ],
+                          "Condition":  {
+                                            "Null":  {
+                                                         "dynamodb:LeadingKeys":  "false"
+                                                     },
+                                            "ForAllValues:StringLike":  {
+                                                                            "dynamodb:LeadingKeys":  [
+                                                                                                         "CONTROL",
+                                                                                                         "PRODUCTS",
+                                                                                                         "PUBLISHED_PRODUCTS",
+                                                                                                         "SEARCH#PRODUCT#*",
+                                                                                                         "PRODUCT_TAG#*",
+                                                                                                         "GEN#*",
+                                                                                                         "TAGS",
+                                                                                                         "TAGNAME#*",
+                                                                                                         "NODES",
+                                                                                                         "CHILDREN#*",
+                                                                                                         "PUBLISHED_DOCUMENTS",
+                                                                                                         "SEARCH#DOCUMENT#*",
+                                                                                                         "DOCUMENT_TAG#*"
+                                                                                                     ]
+                                                                        }
+                                        },
+                          "Action":  [
+                                         "dynamodb:GetItem",
+                                         "dynamodb:Query"
+                                     ]
+                      },
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "WriteSharedWorkspaceTransactionally",
+                          "Resource":  [
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog",
+                                           "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-filesystem-metadata"
+                                       ],
+                          "Condition":  {
+                                            "ForAllValues:StringLike":  {
+                                                                            "dynamodb:LeadingKeys":  [
+                                                                                                         "CONTROL",
+                                                                                                         "PRODUCTS",
+                                                                                                         "PUBLISHED_PRODUCTS",
+                                                                                                         "SEARCH#PRODUCT#*",
+                                                                                                         "PRODUCT_TAG#*",
+                                                                                                         "GEN#*",
+                                                                                                         "TAGS",
+                                                                                                         "TAGNAME#*",
+                                                                                                         "NODES",
+                                                                                                         "CHILDREN#*",
+                                                                                                         "PUBLISHED_DOCUMENTS",
+                                                                                                         "SEARCH#DOCUMENT#*",
+                                                                                                         "DOCUMENT_TAG#*"
+                                                                                                     ]
+                                                                        },
+                                            "Null":  {
+                                                         "dynamodb:LeadingKeys":  "false"
+                                                     },
+                                            "ForAnyValue:StringEquals":  {
+                                                                             "dynamodb:EnclosingOperation":  [
+                                                                                                                 "TransactWriteItems"
+                                                                                                             ]
+                                                                         }
+                                        },
+                          "Action":  [
+                                         "dynamodb:PutItem",
+                                         "dynamodb:DeleteItem"
+                                     ]
+                      },
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "ManageDocumentVersions",
+                          "Resource":  "arn:aws:s3:::exodus-filesystem-documents-384635610196-us-east-2/documents/*",
+                          "Action":  [
+                                         "s3:GetObjectVersion",
+                                         "s3:PutObject",
+                                         "s3:DeleteObjectVersion"
+                                     ]
+                      }
+                  ]
+}

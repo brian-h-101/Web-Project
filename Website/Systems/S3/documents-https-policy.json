@@ -1,0 +1,20 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Action":  "s3:*",
+                          "Condition":  {
+                                            "Bool":  {
+                                                         "aws:SecureTransport":  "false"
+                                                     }
+                                        },
+                          "Principal":  "*",
+                          "Resource":  [
+                                           "arn:aws:s3:::exodus-filesystem-documents-384635610196-us-east-2",
+                                           "arn:aws:s3:::exodus-filesystem-documents-384635610196-us-east-2/*"
+                                       ],
+                          "Effect":  "Deny",
+                          "Sid":  "DenyInsecureTransport"
+                      }
+                  ]
+}

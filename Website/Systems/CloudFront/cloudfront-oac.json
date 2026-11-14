@@ -1,0 +1,7 @@
+{
+    "Description":  "Signed requests to the Exodus portfolio S3 bucket",
+    "Name":  "exodus-portfolio-web-oac",
+    "OriginAccessControlOriginType":  "s3",
+    "SigningBehavior":  "always",
+    "SigningProtocol":  "sigv4"
+}

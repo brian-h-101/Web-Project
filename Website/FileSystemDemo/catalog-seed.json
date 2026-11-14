@@ -1,0 +1,5 @@
+{
+  "source": "OrderingPlatform/Local/Backend/catalog.py",
+  "source_sha256": "fdfde65f885ab0d00fa4d003e104e6c03c9e1ad4fc9f91c4e4d1913980e1707c",
+  "note": "Provenance only. seed.py reads actual current CommerceDemo/Lambda/catalog.py at execution; this file contains no independent prices."
+}

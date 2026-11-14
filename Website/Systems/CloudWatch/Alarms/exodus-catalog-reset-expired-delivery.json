@@ -1,0 +1,20 @@
+{
+    "AlarmName":  "exodus-catalog-reset-expired-delivery",
+    "AlarmDescription":  "A reset expired. Inspect its intended-day audit and logs.",
+    "Namespace":  "Exodus/CatalogReset",
+    "MetricName":  "ExpiredDelivery",
+    "Dimensions":  [
+
+                   ],
+    "Statistic":  "Sum",
+    "Unit":  "Count",
+    "Period":  300,
+    "EvaluationPeriods":  1,
+    "DatapointsToAlarm":  1,
+    "Threshold":  1,
+    "ComparisonOperator":  "GreaterThanOrEqualToThreshold",
+    "TreatMissingData":  "notBreaching",
+    "AlarmActions":  [
+
+                     ]
+}

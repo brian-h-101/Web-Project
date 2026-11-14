@@ -1,0 +1,39 @@
+{
+  "TableName": "exodus-commerce-orders",
+  "BillingMode": "PAY_PER_REQUEST",
+  "DeletionProtectionEnabled": true,
+  "AttributeDefinitions": [
+    { "AttributeName": "PK", "AttributeType": "S" },
+    { "AttributeName": "SK", "AttributeType": "S" },
+    { "AttributeName": "GSI1PK", "AttributeType": "S" },
+    { "AttributeName": "GSI1SK", "AttributeType": "S" }
+  ],
+  "KeySchema": [
+    { "AttributeName": "PK", "KeyType": "HASH" },
+    { "AttributeName": "SK", "KeyType": "RANGE" }
+  ],
+  "OnDemandThroughput": {
+    "MaxReadRequestUnits": 5,
+    "MaxWriteRequestUnits": 5
+  },
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "SessionHistory",
+      "KeySchema": [
+        { "AttributeName": "GSI1PK", "KeyType": "HASH" },
+        { "AttributeName": "GSI1SK", "KeyType": "RANGE" }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "OnDemandThroughput": {
+        "MaxReadRequestUnits": 5,
+        "MaxWriteRequestUnits": 5
+      }
+    }
+  ],
+  "Tags": [
+    { "Key": "Project", "Value": "Exodus" },
+    { "Key": "Component", "Value": "Commerce" }
+  ]
+}

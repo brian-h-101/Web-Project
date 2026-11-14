@@ -1,0 +1,14 @@
+{
+    "logGroupName":  "/aws/lambda/exodus-catalog-reset",
+    "filterName":  "exodus-catalog-reset-expired-delivery",
+    "filterPattern":  "\"catalog_reset outcome=SKIPPED_EXPIRED\"",
+    "metricTransformations":  [
+                                  {
+                                      "unit":  "Count",
+                                      "metricName":  "ExpiredDelivery",
+                                      "metricValue":  "1",
+                                      "defaultValue":  0,
+                                      "metricNamespace":  "Exodus/CatalogReset"
+                                  }
+                              ]
+}

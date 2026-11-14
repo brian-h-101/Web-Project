@@ -1,0 +1,39 @@
+{
+    "TableName":  "exodus-shared-catalog",
+    "AttributeDefinitions":  [
+                                 {
+                                     "AttributeType":  "S",
+                                     "AttributeName":  "PK"
+                                 },
+                                 {
+                                     "AttributeType":  "S",
+                                     "AttributeName":  "SK"
+                                 }
+                             ],
+    "KeySchema":  [
+                      {
+                          "KeyType":  "HASH",
+                          "AttributeName":  "PK"
+                      },
+                      {
+                          "KeyType":  "RANGE",
+                          "AttributeName":  "SK"
+                      }
+                  ],
+    "BillingMode":  "PAY_PER_REQUEST",
+    "DeletionProtectionEnabled":  true,
+    "OnDemandThroughput":  {
+                               "MaxReadRequestUnits":  100,
+                               "MaxWriteRequestUnits":  80
+                           },
+    "Tags":  [
+                 {
+                     "Key":  "Project",
+                     "Value":  "Exodus"
+                 },
+                 {
+                     "Key":  "Component",
+                     "Value":  "SharedCatalog"
+                 }
+             ]
+}

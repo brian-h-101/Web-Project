@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadCatalogState",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:Query"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog"
+    },
+    {
+      "Sid": "WriteCatalogGenerationsTransactionally",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:ConditionCheckItem"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-2:384635610196:table/exodus-shared-catalog",
+      "Condition": {
+        "ForAnyValue:StringEquals": {
+          "dynamodb:EnclosingOperation": [
+            "TransactWriteItems"
+          ]
+        }
+      }
+    }
+  ]
+}

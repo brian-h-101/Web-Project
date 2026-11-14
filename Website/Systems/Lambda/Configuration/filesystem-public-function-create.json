@@ -1,0 +1,30 @@
+{
+    "FunctionName":  "exodus-filesystem-public",
+    "Description":  "Public reads for the Exodus shared catalog and file workspace",
+    "Runtime":  "python3.12",
+    "Handler":  "public_handler.handler",
+    "Role":  "arn:aws:iam::384635610196:role/exodus-filesystem-public-role",
+    "PackageType":  "Zip",
+    "Architectures":  [
+                          "x86_64"
+                      ],
+    "MemorySize":  256,
+    "Timeout":  20,
+    "Environment":  {
+                        "Variables":  {
+                                          "CATALOG_TABLE":  "exodus-shared-catalog",
+                                          "DOCUMENT_BUCKET":  "exodus-filesystem-documents-384635610196-us-east-2",
+                                          "FILESYSTEM_TABLE":  "exodus-filesystem-metadata",
+                                          "CATALOG_CONTRACT":  "generation-v1",
+                                          "PUBLIC_SHARED_MANAGEMENT_ENABLED":  "true"
+                                      }
+                    },
+    "LoggingConfig":  {
+                          "LogGroup":  "/aws/lambda/exodus-filesystem-public",
+                          "LogFormat":  "Text"
+                      },
+    "Tags":  {
+                 "Project":  "Exodus",
+                 "Component":  "FileSystem"
+             }
+}

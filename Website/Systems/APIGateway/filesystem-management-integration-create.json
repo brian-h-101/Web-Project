@@ -1,0 +1,9 @@
+{
+    "ApiId":  "4b0x78ovwb",
+    "IntegrationType":  "AWS_PROXY",
+    "IntegrationMethod":  "POST",
+    "IntegrationUri":  "arn:aws:lambda:us-east-2:384635610196:function:exodus-filesystem-management",
+    "PayloadFormatVersion":  "2.0",
+    "TimeoutInMillis":  25000,
+    "Description":  "Exodus FileSystem shared visitor management"
+}

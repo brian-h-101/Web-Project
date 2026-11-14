@@ -1,0 +1,23 @@
+{
+  "FunctionName": "exodus-commerce",
+  "Runtime": "python3.12",
+  "Role": "arn:aws:iam::384635610196:role/exodus-commerce-role",
+  "Handler": "handler.handler",
+  "Description": "Exodus Commerce products and public orders API",
+  "Timeout": 10,
+  "MemorySize": 256,
+  "PackageType": "Zip",
+  "Architectures": ["x86_64"],
+  "Environment": {
+    "Variables": {
+      "TABLE_NAME": "exodus-commerce-orders",
+      "CATALOG_MODE": "dynamodb",
+      "CATALOG_TABLE": "exodus-shared-catalog",
+      "ORDER_CONTRACT": "public-orders-v1"
+    }
+  },
+  "LoggingConfig": {
+    "LogFormat": "Text",
+    "LogGroup": "/aws/lambda/exodus-commerce"
+  }
+}

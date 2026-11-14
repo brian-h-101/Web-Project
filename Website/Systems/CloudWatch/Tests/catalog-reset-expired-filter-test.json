@@ -1,0 +1,7 @@
+{
+    "logEventMessages":  [
+                             "catalog_reset outcome=SKIPPED_EXPIRED day=2026-11-11 request_id=expired-example",
+                             "catalog_reset outcome=COMPLETED day=2026-11-12 request_id=completed-example"
+                         ],
+    "filterPattern":  "\"catalog_reset outcome=SKIPPED_EXPIRED\""
+}

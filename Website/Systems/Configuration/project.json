@@ -1,0 +1,33 @@
+{
+  "Aws": {
+    "Profile": "exodus",
+    "AccountId": "384635610196",
+    "Region": "us-east-2"
+  },
+  "Website": {
+    "Domain": "brianho101-portfolio.com",
+    "Bucket": "exodus-portfolio-web-384635610196-us-east-2",
+    "DistributionId": "E3M9GEX0LQHSED"
+  },
+  "Lambda": {
+    "Name": "exodus-portfolio-greeting",
+    "Runtime": "python3.14",
+    "Handler": "lambda_function.lambda_handler",
+    "RoleName": "exodus-portfolio-greeting-role",
+    "Source": "Website/Backend/Lambda/Greeting/lambda_function.py",
+    "Package": "Website/Systems/Lambda/Packages/greeting-function.zip",
+    "Event": "Website/Systems/Lambda/Events/greeting-event.json",
+    "Response": "Website/Systems/Lambda/Responses/greeting-response.json",
+    "TrustPolicy": "Website/Systems/IAM/lambda-greeting-trust.json"
+  },
+  "HttpApi": {
+    "Name": "exodus-portfolio-api",
+    "RouteKey": "GET /api/greeting",
+    "State": "Website/Systems/APIGateway/http-api.json"
+  },
+  "Budget": {
+    "Name": "Exodus-Monthly-Cost",
+    "Region": "us-east-1",
+    "AmountUSD": 10
+  }
+}
