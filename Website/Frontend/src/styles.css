@@ -303,7 +303,20 @@ section[tabindex="-1"]:focus-visible { outline: 2px solid var(--theme-focus); ou
 /* Viewing modes and native technical disclosures. */
 .demo-launch { display: inline-flex; flex-direction: column; gap: 7px; align-items: flex-start; max-width: 100%; }
 .launch-guidance { color: var(--secondary); font-size: .78rem; line-height: 1.5; }
-.project-detail-header .actions { align-items: flex-start; }
+.project-detail-header .actions {
+  align-items: flex-start;
+  column-gap: 6px;
+  row-gap: 7px;
+}
+
+.project-detail-header .actions .demo-launch {
+  display: contents;
+}
+
+.project-detail-header .actions .launch-guidance {
+  order: 1;
+  flex-basis: 100%;
+}
 #apis:focus-visible, summary:focus-visible { outline: 3px solid var(--theme-focus); outline-offset: 4px; }
 #services h2 { display: inline; font-size: 1.4rem; }
 
