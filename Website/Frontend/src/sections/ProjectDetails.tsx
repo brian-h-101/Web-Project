@@ -17,7 +17,7 @@ export function ProjectDetails() {
   const other = projects[(projects.indexOf(project) + 1) % projects.length];
   const isCrpgFramework = project.slug === 'crpg-framework';
   const demonstration = (
-    <>
+    <div className={`project-demonstration demonstration-${project.demoKind}`}>
       <ol className="demo-instructions">
         {project.demoSteps.map((step) => {
           const demoUrl = step.linkedProjectSlug
@@ -68,7 +68,7 @@ export function ProjectDetails() {
           }
         </OptionalDemoPreview>
       )}
-    </>
+    </div>
   );
   const sections: ProjectAccordionSection[] = [
     {
@@ -116,40 +116,12 @@ export function ProjectDetails() {
       ),
     },
     {
-      id: isCrpgFramework ? 'demo' : 'testing',
-      title: isCrpgFramework ? 'Try the Demonstration' : 'Testing and Limitations',
+      id: 'demo',
+      title: 'Try the Demonstration',
       subtitle: isCrpgFramework
         ? 'Run the current framework locally in Godot.'
-        : 'Evidence, verification scope, and known limits.',
-      content: isCrpgFramework ? demonstration : (
-        <>
-          <div className="testing-grid">
-            {project.testing.map((item) => (
-              <section key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-              </section>
-            ))}
-          </div>
-          {project.historicalVerification && (
-            <details className="historical-records">
-              <summary>Earlier verification records</summary>
-              {project.historicalVerification.map((record) => (
-                <section key={record.date}>
-                  <h3>{record.title}</h3>
-                  <time dateTime={record.date}>{record.date}</time>
-                  <p>{record.detail}</p>
-                </section>
-              ))}
-            </details>
-          )}
-          <aside className="note">
-            <h3>Scope and Limitations</h3>
-            <p>{project.limitations}</p>
-            <p>{project.improvement}</p>
-          </aside>
-        </>
-      ),
+        : 'Open the live demonstration and follow the steps below.',
+      content: demonstration,
     },
   ];
   return (
@@ -183,12 +155,6 @@ export function ProjectDetails() {
         <p>{project.overview}</p>
         <span className="status">{project.status}</span>
       </section>
-      {!isCrpgFramework && (
-        <section className="case-study-section" id="demo" tabIndex={-1} aria-labelledby="demo-title">
-          <h2 id="demo-title">Try the demonstration</h2>
-          {demonstration}
-        </section>
-      )}
       <ProjectAccordion key={project.slug} sections={sections} />
       <nav className="end-navigation project-detail-footer" aria-label="Continue exploring">
         <Link className="text-link" to="/#projects">

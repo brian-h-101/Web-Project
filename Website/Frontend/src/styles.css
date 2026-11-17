@@ -352,3 +352,48 @@ section[tabindex="-1"]:focus-visible { outline: 2px solid var(--theme-focus); ou
 #projects .status::before {
   background: var(--theme-success);
 }
+
+/* Align matching content across the homepage project cards. */
+@supports (grid-template-rows: subgrid) {
+  #projects .project-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 0;
+  }
+}
+
+/* Match the Commerce demonstration controls. */
+.demonstration-commerce {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+  align-items: start;
+}
+
+.demonstration-commerce > .demo-instructions,
+.demonstration-commerce .launch-guidance,
+.demonstration-commerce #preview-panel {
+  grid-column: 1 / -1;
+}
+
+.demonstration-commerce > .demo-launch,
+.demonstration-commerce > .optional-preview {
+  display: contents;
+}
+
+.demonstration-commerce > .demo-launch > .button,
+.demonstration-commerce > .optional-preview > .button {
+  grid-column: 1;
+  justify-self: stretch;
+  min-width: 0;
+  font-family: inherit;
+  text-align: center;
+}
+
+.demonstration-commerce .launch-guidance {
+  margin-top: 7px;
+}
+
+.demonstration-commerce > .optional-preview > .button {
+  margin-top: 24px;
+}
