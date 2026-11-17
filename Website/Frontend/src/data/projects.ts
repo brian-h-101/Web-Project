@@ -300,41 +300,17 @@ export const projects: Project[] = [
       }
     ],
     "demoSteps": [
-      { "text": "Start the guided showcase, then open Menus → Feature Guide for the ten stations." },
-      { "text": "Try a contextual action, dialogue choice, container transfer or supported combat encounter." },
-      { "text": "Use the saving guidance below to save and load the matching game; other examples remain available." }
+      { "text": "Download or clone the linked repository and use Godot 4.7.1 to run the project." },
+      { "text": "For your first session, use the new-session setting and bootstrap command below." },
+      { "text": "Move with WASD or the arrow keys. Press Space to strike the nearest target and watch its health display change." },
+      { "text": "Press F5 to save. Close the game, switch to restore mode, and relaunch to restore entity state, time, the map, and positions." }
     ],
-    "testing": [
-      {
-        "title": "Framework validation — October 25, 2026",
-        "detail": "The retained local Full suite passed 3,742 registered assertions. Another 389 supplemental checks brought that release’s total to 4,131, including 303 mechanics/persistence and 43 real-input UI assertions. Export inspection covered all five startups, canonical content, artwork and font licensing. These dated suites were not rerun for this presentation revision."
-      },
-      {
-        "title": "Production acceptance — October 25, 2026",
-        "detail": "Release fb4444f7f8c910fd6b84 was published and independently verified. Recorded desktop checks exercised all ten Feature Demo stations and representative behavior in all five examples; narrow desktop-pointer checks included reload/Load, transfer and movement. The original iframe retained its game through collapse/reopen. Physical touch, other browsers and exhaustive workflow coverage were not established. Later October 26 publication checks preserved its bytes; hashes alone are not gameplay acceptance."
-      },
-      {
-        "title": "Portfolio integration",
-        "detail": "Local portfolio tests check opt-in mounting, trusted child messages, retained iframe identity, keyboard/hash navigation and the recommended launch. Package checks preserve all eight raw and twelve staged game files, selectors and save paths without regenerating Godot."
-      }
-    ],
-    "limitations": "Requires a WebAssembly and WebGL 2 capable browser. The single-threaded export is a substantial download and desktop keyboard and mouse remain the primary controls. Browser storage can be evicted; a different hostname has a different save store. No multiplayer, cloud saves, or complete narrative campaign is claimed.",
-    "improvement": "Future work could improve touch ergonomics, add a user-facing save export, and expand authored content. These are proposed improvements, not implemented features.",
+    "testing": [],
+    "limitations": "",
+    "improvement": "",
     "contribution": "I built the framework, Code-First authoring tools, reusable gameplay systems, test suites, and browser/AWS portfolio integration using Godot.",
     "engineeringFocus": "Reusing game systems while checking actions and saved progress.",
-    "recommendedDemoUrl": "/demos/crpg-game/?game=code-first-feature-demo",
-    "historicalVerification": [
-      {
-        "date": "2026-10-23",
-        "title": "Earlier four-game Code-First export",
-        "detail": "2,450 automated checks passed with zero failures in the Godot 4.7.1 local export pipeline. The then-shipping definitions, four startups, 20 JSON roots, nine images and licensed font were inspected. This historical framework/export record is not a new production gameplay check."
-      },
-      {
-        "date": "2026-10-22",
-        "title": "v1.4 framework and window-header checks",
-        "detail": "591 automated checks passed: 534 existing assertions plus 57 Window Header Refinement assertions. V1_4_WINDOW_HEADER_AFTER_ACTION_REPORT.md and build/v14-header-validation/final-tests.log retain that local record, alongside 16 HTTP checks and native/Chromium observations. These are historical checks, not reruns or current production acceptance."
-      }
-    ]
+    "recommendedDemoUrl": "/demos/crpg-game/?game=code-first-feature-demo"
   }
 ];
 

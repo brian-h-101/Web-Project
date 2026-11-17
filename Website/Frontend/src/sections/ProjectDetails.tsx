@@ -6,7 +6,6 @@ import { ProjectAccordion, type ProjectAccordionSection } from '../components/Pr
 import { OptionalDemoPreview } from '../components/OptionalDemoPreview';
 import { CommerceDemoViewer } from '../components/CommerceDemoViewer';
 import { FileSystemDemoViewer } from '../components/FileSystemDemoViewer';
-import { CRPGDemoViewer } from '../components/CRPGDemoViewer';
 import { NotFound } from './Profile';
 
 export function ProjectDetails() {
@@ -16,6 +15,61 @@ export function ProjectDetails() {
     return <NotFound />;
   }
   const other = projects[(projects.indexOf(project) + 1) % projects.length];
+  const isCrpgFramework = project.slug === 'crpg-framework';
+  const demonstration = (
+    <>
+      <ol className="demo-instructions">
+        {project.demoSteps.map((step) => {
+          const demoUrl = step.linkedProjectSlug
+            ? projects.find((item) => item.slug === step.linkedProjectSlug)?.demoUrl
+            : undefined;
+          return (
+            <li key={step.text}>
+              {demoUrl ? (
+                <a href={demoUrl} target="_top" rel="noopener noreferrer">
+                  {step.text} <span aria-hidden="true">→</span>
+                </a>
+              ) : (
+                step.text
+              )}
+            </li>
+          );
+        })}
+      </ol>
+      <DemoLaunch project={project} />
+      {isCrpgFramework ? (
+        <aside className="note saving-guidance">
+          <h3>Local startup and saving</h3>
+          <p>
+            For your first run, open{' '}
+            <code>Framework/Content/Configuration/Persistence/session_persistence.gd</code>{' '}
+            and set <code>startup_mode</code> to <code>{'&"new"'}</code>.
+            The default restore mode requires an existing save.
+          </p>
+          <p>
+            From the folder containing <code>project.godot</code>, run the following command,
+            replacing <code>godot</code> with the executable name or path for your Godot installation:
+          </p>
+          <p>
+            <code>godot --path . --windowed --resolution 1280x720 --script res://Framework/Env/Bootstrap/main.gd</code>
+          </p>
+          <p>
+            Press <kbd>F5</kbd> in the running game to save. To resume, close the game,
+            set <code>startup_mode</code> to <code>{'&"restore"'}</code>, and run the command again.
+            The save uses Godot's local user storage at <code>user://Saves/slot_01.fws</code>.
+          </p>
+        </aside>
+      ) : (
+        <OptionalDemoPreview key={project.slug} kind={project.demoKind} label="Show preview on this page">
+          {(visible) =>
+            project.demoKind === 'commerce'
+              ? <CommerceDemoViewer />
+              : <FileSystemDemoViewer previewVisible={visible} />
+          }
+        </OptionalDemoPreview>
+      )}
+    </>
+  );
   const sections: ProjectAccordionSection[] = [
     {
       id: 'implementation',
@@ -62,10 +116,12 @@ export function ProjectDetails() {
       ),
     },
     {
-      id: 'testing',
-      title: 'Testing and Limitations',
-      subtitle: 'Evidence, verification scope, and known limits.',
-      content: (
+      id: isCrpgFramework ? 'demo' : 'testing',
+      title: isCrpgFramework ? 'Try the Demonstration' : 'Testing and Limitations',
+      subtitle: isCrpgFramework
+        ? 'Run the current framework locally in Godot.'
+        : 'Evidence, verification scope, and known limits.',
+      content: isCrpgFramework ? demonstration : (
         <>
           <div className="testing-grid">
             {project.testing.map((item) => (
@@ -127,85 +183,12 @@ export function ProjectDetails() {
         <p>{project.overview}</p>
         <span className="status">{project.status}</span>
       </section>
-      <section className="case-study-section" id="demo" tabIndex={-1} aria-labelledby="demo-title">
-        <h2 id="demo-title">Try the demonstration</h2>
-        <ol className="demo-instructions">
-          {project.demoSteps.map((step) => {
-            const demoUrl = step.linkedProjectSlug
-              ? projects.find((item) => item.slug === step.linkedProjectSlug)?.demoUrl
-              : undefined;
-            return (
-              <li key={step.text}>
-                {demoUrl ? (
-                  <a href={demoUrl} target="_top" rel="noopener noreferrer">
-                    {step.text} <span aria-hidden="true">→</span>
-                  </a>
-                ) : (
-                  step.text
-                )}
-              </li>
-            );
-          })}
-        </ol>
-        <DemoLaunch project={project} />
-        {project.demoKind === 'crpg' && (
-          <>
-            <details className="other-demonstrations">
-              <summary>Other demonstrations</summary>
-              <nav aria-label="Other CRPG demonstrations">
-                <a href="/demos/crpg-game/" target="_top" rel="noopener noreferrer">
-                  Original North Gate Adventure →
-                </a>
-                <span>Open Capability Examples from the original adventure’s game header.</span>
-                <a
-                  href="/demos/crpg-game/?game=north-gate-code-first"
-                  target="_top"
-                  rel="noopener noreferrer"
-                >
-                  NorthGateCodeFirst →
-                </a>
-                <a
-                  href="/demos/crpg-game/?game=code-first-capabilities"
-                  target="_top"
-                  rel="noopener noreferrer"
-                >
-                  CodeFirstCapabilityShowcase →
-                </a>
-              </nav>
-            </details>
-            <aside className="note saving-guidance">
-              <h3>Controls and saving</h3>
-              <p>
-                Desktop keyboard and mouse are recommended. Finish or leave active dialogue or
-                combat before switching games.
-              </p>
-              <p>
-                Saves are stored in this browser for the current website address. After reloading,
-                reopen the same game and select Load. Save and Load require confirmation. Browser
-                storage can be cleared, and saves do not synchronize between browsers or website
-                addresses.
-              </p>
-            </aside>
-          </>
-        )}
-        <OptionalDemoPreview
-          key={project.slug}
-          kind={project.demoKind}
-          label={
-            project.demoKind === 'crpg'
-              ? 'Show original adventure preview on this page'
-              : 'Show preview on this page'
-          }
-        >
-          {(visible) =>
-            ({
-              commerce: <CommerceDemoViewer />,
-              filesystem: <FileSystemDemoViewer previewVisible={visible} />,
-              crpg: <CRPGDemoViewer />,
-            })[project.demoKind]
-          }
-        </OptionalDemoPreview>
-      </section>
+      {!isCrpgFramework && (
+        <section className="case-study-section" id="demo" tabIndex={-1} aria-labelledby="demo-title">
+          <h2 id="demo-title">Try the demonstration</h2>
+          {demonstration}
+        </section>
+      )}
       <ProjectAccordion key={project.slug} sections={sections} />
       <nav className="end-navigation project-detail-footer" aria-label="Continue exploring">
         <Link className="text-link" to="/#projects">
