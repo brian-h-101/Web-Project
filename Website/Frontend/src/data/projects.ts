@@ -231,92 +231,72 @@ export const projects: Project[] = [
     ],
     "architecture": [
       {
-        "name": "Action Request",
-        "description": "Action ID, actor, target, and arguments from the interface"
+        "name": "Input and Target Selection",
+        "description": "A configured input selects an interaction and resolves its target in the scene."
       },
       {
-        "name": "Action Dispatcher",
-        "description": "Resolve entities and check request and session constraints"
+        "name": "Entity Resolution",
+        "description": "The world bridge converts actor and target nodes into runtime entity IDs."
       },
       {
-        "name": "Strategy Registry",
-        "description": "Resolve the registered behavior for the action ID"
+        "name": "Definition Lookup",
+        "description": "The runtime resolves the interaction and its referenced action."
       },
       {
-        "name": "Selected Strategy",
-        "description": "Registered behavior selected; execution waits for eligibility checks"
+        "name": "Availability and Requirements",
+        "description": "The interaction executor checks the actor's available interactions and evaluates authored requirements."
       },
       {
-        "name": "Condition Evaluation",
-        "description": "Authored conditions and strategy-specific eligibility checks precede execution"
+        "name": "Sequential Effect Execution",
+        "description": "The action executor binds entity roles and arguments, then applies each effect through the attribute connector."
       },
       {
-        "name": "Proposed Effects",
-        "description": "Strategy execution constructs explicit state changes, messages, and events"
-      },
-      {
-        "name": "Effect Validation",
-        "description": "Apply effects to shadow state and check owner and session invariants"
-      },
-      {
-        "name": "State Commit",
-        "description": "Apply normalized primitive effects to authoritative owners"
-      },
-      {
-        "name": "Post-Commit Events",
-        "description": "Ordered notifications after the action effects commit"
-      },
-      {
-        "name": "Action Result / UI",
-        "description": "Render the result and refreshed runtime state"
+        "name": "State Updates and Feedback",
+        "description": "Successful writes update entity state and emit attribute notifications. Displays refresh, and execution returns a structured result."
       }
     ],
     "stores": [],
     "architectureVertical": true,
-    "architectureCaption": "Framework components and the sequence of a gameplay action.",
+    "architectureCaption": "Framework responsibilities and the path from player input to entity updates and interface feedback.",
     "architectureGroups": [
       {
-        "name": "Core",
-        "description": "Action contracts, state references, shared types"
+        "name": "Authored Content",
+        "description": "Entity presets, reusable attribute fragments, interaction and action definitions, configuration, and presentation scenes."
       },
       {
-        "name": "Entity",
-        "description": "Generic Entity, Entity Blueprint, Entity Registry"
+        "name": "Runtime API",
+        "description": "Interfaces for session startup, entity access, interactions, world bindings, and persistence."
       },
       {
-        "name": "Runtime",
-        "description": "GameRuntime, WorldState, SystemState, SessionStore, Action Dispatcher, Strategy Registry"
+        "name": "Runtime Implementation",
+        "description": "Entity storage, attribute references, requirement evaluation, effect execution, clock state, and save encoding."
       },
       {
-        "name": "Gameplay",
-        "description": "Exploration, dialogue, combat, interactions"
-      },
-      {
-        "name": "Infrastructure",
-        "description": "Conditions, effects, events, persistence"
-      },
-      {
-        "name": "Integration",
-        "description": "World View, Dialogue View, Combat View, UI components"
+        "name": "Godot Environment",
+        "description": "Session hosting, content discovery, map loading, scene bindings, input, targeting, movement, and interface presentation."
       }
     ],
-    "architectureNote": "The diagram groups the execution responsibilities. Authored conditions are checked by the dispatcher before strategy execution; strategies also validate their own requirements. Effects are checked on shadow state before commit. This does not promise rollback if a live commit is interrupted. The UI reads state and submits actions rather than directly editing gameplay owners.",
+    "architectureNote": "Runtime entities store gameplay attributes independently of scene nodes. The environment connects those entities to maps, controls, and displays. Interaction requirements are checked before action execution, while effects are applied sequentially and notify observers as individual writes succeed. Movement and clock advancement follow separate update paths.",
     "implementation": [
       {
-        "title": "Authoring and runtime separation",
-        "detail": "GDScript Code-First definitions generate validated content for the existing loader. Generic Entities hold developer-defined typed attributes and containers, avoiding a class per gameplay role. Five games share the same runtime rather than embedding game-specific rules in interface widgets."
+        "title": "Reusable entity composition",
+        "detail": "Entity presets combine reusable attribute fragments with explicit overrides. Each spawned entity receives its own copied data, allowing characters to share definitions while maintaining independent state. This supports different gameplay roles without requiring a separate entity class for each role."
       },
       {
-        "title": "Validated actions",
-        "detail": "The Action Dispatcher resolves registered strategies, validates requests and conditions, then validates proposed effects on shadow state before committing to authoritative owners. The UI projects state and submits actions. Ordered events follow commit; interruption during a live commit is not promised to roll back."
+        "title": "Runtime state separated from scenes",
+        "detail": "The runtime owns entity attributes and interaction execution. Godot environment components bind those entities to scene nodes and provide input, movement, maps, and presentation. Stable entity keys connect saved state to scene placements when a session is reconstructed."
       },
       {
-        "title": "Registered extensions",
-        "detail": "Trusted extensions install before initialization and use the existing dispatcher, validation and state owners. Authored windows expose Inventory, Talents, Quests, Reputation and container transfer; they do not introduce a separate gameplay engine. Feature Guide, Wait and Resolve opponent turn make the guided stations observable."
+        "title": "Declarative interactions and effects",
+        "detail": "Interaction definitions specify availability, requirements, and arguments, while action definitions describe changes to entity attributes. Reusable executors bind the actor and target, check requirements, and apply effects in order. Execution stops at the first failure; earlier successful effects remain applied."
       },
       {
-        "title": "Validated save restoration",
-        "detail": "SaveManager v2 validates candidate entity, world, system and session state before replacing the running game. Each example retains its own slot and existing schema. Saves use browser-origin-local IndexedDB; there is no gameplay server or cloud save synchronization."
+        "title": "Presentation driven by runtime changes",
+        "detail": "Attribute displays read values through the runtime API and refresh when relevant attributes change. Entity bindings connect status displays to their scene representations, allowing interface components to present gameplay state without maintaining a separate copy."
+      },
+      {
+        "title": "Versioned session reconstruction",
+        "detail": "Session snapshots capture entity attributes, clock state, the active map, and entity positions. The save format includes version checks and a SHA-256 checksum for corruption detection. Loading reconstructs a stopped session from current content definitions and saved data, while saving writes through a temporary file before publishing the result."
       }
     ],
     "demoSteps": [
