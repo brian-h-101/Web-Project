@@ -299,6 +299,18 @@ export const projects: Project[] = [
     ],
     "frameworkState": {
       "intro": "A modular Godot framework in active development, built around reusable behavior resources and centralized rule evaluation. Authored definitions describe interaction requirements and effects, while shared runtime services handle entity access, comparisons, and state changes.",
+      "authoring": {
+        "title": "Hybrid development workflow",
+        "detail": "Development combines VS Code and Godot. I created a custom Framework Resources extension for VS Code to view and edit reusable declarative definitions and their relationships. Godot provides the resource and scene environment used to assemble and run the framework.",
+        "rulesEngine": "The centralized Rules Engine evaluates authored requirements and executes configured effects. Content provides the configurable environment, including entity definitions, interactions, actions, conditions, and presentation settings. Env connects those definitions to Godot's scenes, input, and session lifecycle, while Infrastructure implements entity storage, attribute access, requirement evaluation, effect execution, and persistence. This keeps gameplay policy in Content and the underlying execution mechanisms in Env and Infrastructure.",
+        "image": {
+          "src": "/images/framework/framework-resources-vscode.png",
+          "alt": "VS Code Framework Resources view showing interactions, linked actions, and reusable condition groups using ALL.",
+          "caption": "Custom Framework Resources view in VS Code, showing interactions linked to actions and reusable condition groups.",
+          "width": 437,
+          "height": 920
+        }
+      },
       "sections": [
         {
           "title": "Implemented foundation",

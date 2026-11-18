@@ -111,6 +111,42 @@ export function ProjectDetails() {
             {project.frameworkState.intro}
           </p>
 
+          {project.frameworkState.authoring && (
+            <section
+              className="framework-authoring"
+              aria-labelledby="framework-authoring-title"
+            >
+              <h3 id="framework-authoring-title">
+                {project.frameworkState.authoring.title}
+              </h3>
+
+              <p>{project.frameworkState.authoring.detail}</p>
+              <p>{project.frameworkState.authoring.rulesEngine}</p>
+
+              <details className="framework-image-disclosure">
+                <summary className="button button-secondary">
+                  <span className="framework-image-show">Show Framework Resources image</span>
+                  <span className="framework-image-hide">Hide Framework Resources image</span>
+                </summary>
+
+                <figure className="framework-authoring-figure">
+                  <img
+                    src={project.frameworkState.authoring.image.src}
+                    alt={project.frameworkState.authoring.image.alt}
+                    width={project.frameworkState.authoring.image.width}
+                    height={project.frameworkState.authoring.image.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
+
+                  <figcaption>
+                    {project.frameworkState.authoring.image.caption}
+                  </figcaption>
+                </figure>
+              </details>
+            </section>
+          )}
+
           <div className="implementation-grid">
             {project.frameworkState.sections.map((section) => (
               <section key={section.title}>

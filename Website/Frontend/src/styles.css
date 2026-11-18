@@ -394,3 +394,57 @@ section[tabindex="-1"]:focus-visible { outline: 2px solid var(--theme-focus); ou
 .demonstration-commerce > .optional-preview > .button {
   margin-top: 24px;
 }
+
+/* Framework authoring workflow and original screenshot. */
+.framework-authoring {
+  margin-top: 32px;
+}
+
+.framework-authoring > p {
+  margin-top: 12px;
+  max-width: 850px;
+  font-size: .9rem;
+}
+
+.framework-authoring-figure {
+  max-width: 437px;
+  margin: 24px 0 0;
+}
+
+.framework-authoring-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.framework-authoring-figure figcaption {
+  margin-top: 12px;
+  color: var(--secondary);
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+/* Expandable framework screenshot. */
+.framework-image-disclosure {
+  margin-top: 24px;
+}
+
+.framework-image-disclosure > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.framework-image-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.framework-image-disclosure .framework-image-hide,
+.framework-image-disclosure[open] .framework-image-show {
+  display: none;
+}
+
+.framework-image-disclosure[open] .framework-image-hide {
+  display: inline;
+}

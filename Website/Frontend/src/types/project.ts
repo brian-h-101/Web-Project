@@ -30,6 +30,18 @@ export interface Project {
   implementation: { title: string; detail: string }[];
   frameworkState?: {
     intro: string;
+    authoring?: {
+      title: string;
+      detail: string;
+      rulesEngine: string;
+      image: {
+        src: string;
+        alt: string;
+        caption: string;
+        width: number;
+        height: number;
+      };
+    };
     sections: {
       title: string;
       detail: string;
