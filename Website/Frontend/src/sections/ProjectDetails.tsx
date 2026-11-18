@@ -37,30 +37,12 @@ export function ProjectDetails() {
         })}
       </ol>
       <DemoLaunch project={project} />
-      {isCrpgFramework ? (
-        <aside className="note saving-guidance">
-          <h3>Local startup and saving</h3>
-          <p>
-            For your first run, open{' '}
-            <code>Framework/Content/Configuration/Persistence/session_persistence.gd</code>{' '}
-            and set <code>startup_mode</code> to <code>{'&"new"'}</code>.
-            The default restore mode requires an existing save.
-          </p>
-          <p>
-            From the folder containing <code>project.godot</code>, run the following command,
-            replacing <code>godot</code> with the executable name or path for your Godot installation:
-          </p>
-          <p>
-            <code>godot --path . --windowed --resolution 1280x720 --script res://Framework/Env/Bootstrap/main.gd</code>
-          </p>
-          <p>
-            Press <kbd>F5</kbd> in the running game to save. To resume, close the game,
-            set <code>startup_mode</code> to <code>{'&"restore"'}</code>, and run the command again.
-            The save uses Godot's local user storage at <code>user://Saves/slot_01.fws</code>.
-          </p>
-        </aside>
-      ) : (
-        <OptionalDemoPreview key={project.slug} kind={project.demoKind} label="Show preview on this page">
+      {!isCrpgFramework && (
+        <OptionalDemoPreview
+          key={project.slug}
+          kind={project.demoKind}
+          label="Show preview on this page"
+        >
           {(visible) =>
             project.demoKind === 'commerce'
               ? <CommerceDemoViewer />
@@ -110,18 +92,39 @@ export function ProjectDetails() {
           />
           <p className="diagram-note">{project.architectureNote}</p>
           <Link className="text-link" to="/engineering">
-            Shared hosting and infrastructure →
+            {isCrpgFramework ? 'Portfolio hosting and infrastructure →' : 'Shared hosting and infrastructure →'}
           </Link>
         </>
       ),
     },
     {
       id: 'demo',
-      title: 'Try the Demonstration',
+      title: isCrpgFramework
+        ? 'Current Framework State'
+        : 'Try the Demonstration',
       subtitle: isCrpgFramework
-        ? 'Run the current framework locally in Godot.'
+        ? 'Implemented capabilities and architectural direction.'
         : 'Open the live demonstration and follow the steps below.',
-      content: demonstration,
+      content: isCrpgFramework && project.frameworkState ? (
+        <>
+          <p className="panel-intro">
+            {project.frameworkState.intro}
+          </p>
+
+          <div className="implementation-grid">
+            {project.frameworkState.sections.map((section) => (
+              <section key={section.title}>
+                <h3>{section.title}</h3>
+                <p>{section.detail}</p>
+              </section>
+            ))}
+          </div>
+
+          <div className="actions">
+            <DemoLaunch project={project} />
+          </div>
+        </>
+      ) : demonstration,
     },
   ];
   return (

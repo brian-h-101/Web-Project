@@ -94,9 +94,9 @@ export function Resume() {
               <em>React | TypeScript | AWS CDK | Terraform | Cloudflare DNS | January 2025</em>
             </div>
             <ul>
-              <li><strong>Built and published a software engineering portfolio</strong> presenting project case studies and embedding two AWS application demonstrations alongside browser-playable CRPG examples.</li>
+              <li><strong>Built and published a software engineering portfolio</strong> presenting project case studies, embedding two AWS application demonstrations, and documenting a Godot framework in development.</li>
               <li><strong>Configured DNS, HTTPS delivery, and application routing</strong> using Terraform for Cloudflare DNS and ACM certificate validation, and AWS CDK for private S3 hosting, CloudFront delivery, HTTPS enforcement, and API routing.</li>
-              <li><strong>Implemented deployment and delivery controls</strong> including security headers, cache policies, immutable versioned game assets, and verification scripts, retaining previous game releases to support rollback.</li>
+              <li><strong>Implemented deployment and delivery controls</strong> including security headers, cache policies, and verification scripts for website and application assets.</li>
             </ul>
           </section>
           <section aria-labelledby="resume-current">

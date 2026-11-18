@@ -124,7 +124,6 @@ code { font-size: .88em; overflow-wrap: anywhere; }
 .demo-viewer iframe { display: block; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin-top: 22px; background: var(--theme-deep); }
 .preview-commerce iframe { height: clamp(440px, 74vh, 740px); }
 .preview-filesystem iframe { height: clamp(440px, 74vh, 760px); }
-.preview-crpg iframe { height: clamp(420px, 72vh, 780px); }
 .testing-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 32px; margin-top: 32px; }
 .testing-grid p { margin-top: 12px; font-size: .9rem; }
 .note { margin-top: 30px; padding: 26px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 3px; background: var(--surface); }
@@ -279,8 +278,6 @@ td { color: var(--secondary); }
 .architecture-vertical .architecture-flow li { padding-left: 52px; }
 .architecture-vertical .node-index { position: absolute; left: 16px; top: 16px; }
 .architecture-vertical .flow-arrow { top: auto; right: auto; left: 50%; bottom: -22px; transform: none; }
-.crpg-viewer iframe { background: var(--theme-deep); }
-.crpg-viewer iframe:fullscreen { height: 100%; border: 0; }
 @media (max-width: 700px) { .architecture-groups { grid-template-columns: 1fr; } }
 
 .case-study-section { padding: 28px 0; border-bottom: 1px solid var(--border); }

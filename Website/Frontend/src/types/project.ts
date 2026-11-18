@@ -28,6 +28,13 @@ export interface Project {
   architectureVertical?: boolean;
   architectureGroups?: ArchitectureStep[];
   implementation: { title: string; detail: string }[];
+  frameworkState?: {
+    intro: string;
+    sections: {
+      title: string;
+      detail: string;
+    }[];
+  };
   demoSteps: DemoInstruction[];
   testing: { title: string; detail: string }[];
   historicalVerification?: { date: string; title: string; detail: string }[];

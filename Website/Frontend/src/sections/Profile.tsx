@@ -26,9 +26,9 @@ export function About() {
             Florida State University, December 2024.
           </p>
           <p>
-            I designed and implemented the applications, framework tooling,
-            tests, and portfolio integration shown here, using established
-            libraries and cloud services.
+            I designed and implemented the web applications and their portfolio
+            integration, the Godot framework tooling, and supporting tests, using
+            established libraries and cloud services.
           </p>
           <Link className="text-link" to="/resume">
             View résumé →

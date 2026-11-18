@@ -206,28 +206,26 @@ export const projects: Project[] = [
     "slug": "crpg-framework",
     "name": "CRPG Framework",
     "demoKind": "crpg",
-    "status": "Deployed on AWS",
-    "description": "A reusable role-playing game framework demonstrated through five playable examples.",
-    "overview": "The examples share systems for exploration, dialogue, inventory, combat, and saved progress. The guided showcase brings these systems together in ten interactive stations.",
+    "status": "In active development",
+    "description": "A declarative, data-driven Godot framework for authoring reusable gameplay rules and executing them through shared runtime services.",
+    "overview": "The framework separates configurable gameplay behavior from runtime mechanisms. Resource definitions connect interactions, requirements, actions, and effects, while shared services manage entity attributes and execution. The current implementation establishes this foundation, with broader rule composition remaining an architectural direction.",
     "technologies": [
       "Godot 4.7.1",
       "GDScript",
-      "WebAssembly",
-      "WebGL 2",
-      "Strategy Pattern"
+      "Godot Resources"
     ],
-    "demoUrl": "/demos/crpg-game/",
+    "demoUrl": "https://github.com/brian-h-101/Framework-project",
     "summaryFlow": [
       "Request action",
       "Validate effects",
       "Update state"
     ],
     "features": [
-      "Five games, including the ten-station Code-First Feature Demo",
-      "Exploration, artwork, contextual actions, and conditional dialogue",
-      "Turn-based combat with several characters and different resource types.",
-      "Authored Inventory, Talents, Quest Journal, Reputation, and reference windows",
-      "Move items between characters and containers."
+      "Reusable interaction, action, and condition resources",
+      "Condition groups that require every requirement to pass",
+      "Generic attribute comparisons and set/add effects",
+      "Runtime entity state connected to Godot scenes and displays",
+      "Versioned local session persistence"
     ],
     "architecture": [
       {
@@ -299,18 +297,29 @@ export const projects: Project[] = [
         "detail": "Session snapshots capture entity attributes, clock state, the active map, and entity positions. The save format includes version checks and a SHA-256 checksum for corruption detection. Loading reconstructs a stopped session from current content definitions and saved data, while saving writes through a temporary file before publishing the result."
       }
     ],
-    "demoSteps": [
-      { "text": "Download or clone the linked repository and use Godot 4.7.1 to run the project." },
-      { "text": "For your first session, use the new-session setting and bootstrap command below." },
-      { "text": "Move with WASD or the arrow keys. Press Space to strike the nearest target and watch its health display change." },
-      { "text": "Press F5 to save. Close the game, switch to restore mode, and relaunch to restore entity state, time, the map, and positions." }
-    ],
+    "frameworkState": {
+      "intro": "A modular Godot framework in active development, built around reusable behavior resources and centralized rule evaluation. Authored definitions describe interaction requirements and effects, while shared runtime services handle entity access, comparisons, and state changes.",
+      "sections": [
+        {
+          "title": "Implemented foundation",
+          "detail": "Interactions, actions, conditions, and condition groups can be authored as .tres resources. Interactions reference reusable requirement groups and actions, with configurable arguments determining their effects. Current condition groups require every condition to pass, and generic effects support assigning or adding attribute values. The authored Strike interaction illustrates this workflow: a strength requirement controls whether an action can apply a configured health change."
+        },
+        {
+          "title": "Separation of policy and mechanism",
+          "detail": "Authored resources define the gameplay policy: which requirements apply, which action runs, and which arguments it receives. The runtime supplies the mechanisms for evaluating those requirements and executing effects. A public API exposes these services while keeping their implementation behind a smaller interface."
+        },
+        {
+          "title": "Architectural direction",
+          "detail": "The framework is intended to support increasingly composable behavior definitions. Future expansion could introduce nested AND, OR, and NOT condition trees and additional operations. The implementation contains the programming logic needed to interpret definitions, validate operations, and manage state."
+        }
+      ]
+    },
+    "demoSteps": [],
     "testing": [],
     "limitations": "",
     "improvement": "",
-    "contribution": "I built the framework, Code-First authoring tools, reusable gameplay systems, test suites, and browser/AWS portfolio integration using Godot.",
-    "engineeringFocus": "Reusing game systems while checking actions and saved progress.",
-    "recommendedDemoUrl": "/demos/crpg-game/?game=code-first-feature-demo"
+    "contribution": "I built the Godot framework, resource-based authoring tools, entity and attribute services, interaction and effect execution, session persistence, and supporting diagnostic checks.",
+    "engineeringFocus": "Separating authored gameplay rules from runtime mechanisms."
   }
 ];
 
@@ -323,7 +332,7 @@ export const skills = [
   {
     "title": "Application and game systems",
     "summary": "Python and Godot/GDScript.",
-    "detail": "Python application services and repositories; Godot/GDScript, Generic Entity data, registered strategies and validated save restoration."
+    "detail": "Python application services and repositories; Godot/GDScript, resource-driven gameplay definitions, generic entity attributes, and session persistence."
   },
   {
     "title": "Cloud and delivery",
