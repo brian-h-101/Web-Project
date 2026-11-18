@@ -53,7 +53,13 @@ export function Resume() {
               <li><strong>Structure characters and world objects around composable capabilities,</strong> where typed data containers represent entity state, registered behaviors and framework services provide capabilities, and configuration defines game-specific data and behavior, enabling different roles and gameplay situations to share the same underlying framework logic.</li>
               <li><strong>Maintain a defined API boundary between framework infrastructure and game-specific implementation,</strong> allowing consuming applications to access framework functionality through public interfaces while retaining control of their content, presentation, interface configuration, and project-specific behavior.</li>
               <li><strong>Develop persistence, validation, regression-testing, and developer-tooling infrastructure</strong> to preserve durable game state, verify system contracts and integrations, detect regressions in existing functionality, and support continued framework development.</li>
-              <li><strong>Validate framework reusability through independently authored game examples,</strong> where the shared framework is accessed through public APIs without modifying its core implementation, while each example defines its own content, extension modules, presentation, and interface configuration.</li>
+              <li>
+                <strong>Build a hybrid VS Code and Godot authoring workflow,</strong>{' '}
+                creating a custom Framework Resources extension to view and edit
+                reusable declarative definitions and their relationships, while
+                Godot provides the resource and scene environment used to assemble
+                and run the framework.
+              </li>
             </ul>
           </section>
           <section aria-labelledby="resume-projects">
@@ -91,11 +97,11 @@ export function Resume() {
           <section className="resume-entry" aria-labelledby="resume-portfolio">
             <div className="resume-entry-heading">
               <h3 id="resume-portfolio">Portfolio Website &amp; Cloud Infrastructure</h3>{' '}
-              <em>React | TypeScript | AWS CDK | Terraform | Cloudflare DNS | January 2025</em>
+              <em>React | TypeScript | AWS CDK | Terraform | Amazon Route 53 | January 2025</em>
             </div>
             <ul>
-              <li><strong>Built and published a software engineering portfolio</strong> presenting project case studies, embedding two AWS application demonstrations, and documenting a Godot framework in development.</li>
-              <li><strong>Configured DNS, HTTPS delivery, and application routing</strong> using Terraform for Cloudflare DNS and ACM certificate validation, and AWS CDK for private S3 hosting, CloudFront delivery, HTTPS enforcement, and API routing.</li>
+              <li><strong>Built and published a software engineering portfolio</strong> presenting project case studies and embedding two AWS application demonstrations.</li>
+              <li><strong>Configured DNS, HTTPS delivery, and application routing</strong> using Amazon Route 53 for DNS, ACM for certificate validation, and AWS CDK for private S3 hosting, CloudFront delivery, HTTPS enforcement, and API routing.</li>
               <li><strong>Implemented deployment and delivery controls</strong> including security headers, cache policies, and verification scripts for website and application assets.</li>
             </ul>
           </section>
