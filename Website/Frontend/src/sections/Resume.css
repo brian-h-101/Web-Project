@@ -5,9 +5,16 @@
 .resume-page { display: flex; flex-direction: column; width: 100%; max-width: 8.5in; min-height: 11in; margin: 0 auto 24px; padding: 36pt 36pt 10pt; background: var(--theme-background); box-shadow: 0 2px 12px var(--theme-shadow); }
 .resume-page + .resume-page { padding-top: 15pt; }
 .resume-document p { color: inherit; }
-.resume-header { text-align: center; margin-bottom: 4pt; }
-.resume-header h1 { font-family: var(--theme-font); font-size: 16pt; line-height: 1.2; font-weight: 700; letter-spacing: 0; color: var(--theme-link); margin: 0 0 19pt; }
-.resume-header address { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 3pt; font-family: var(--theme-font); font-size: 10.5pt; font-style: normal; font-weight: 700; }
+.resume-header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12pt; margin-bottom: 12pt; font-size: 10.5pt; line-height: 1.2; }
+.resume-header .resume-contact, .resume-header .resume-links { min-width: 0; }
+.resume-header .resume-header-label { margin: 0 0 3pt; padding-bottom: 1pt; border-bottom: .5pt solid var(--theme-border); font-weight: 700; }
+/* Bridge the column gap to connect the Contact and Links dividers. */
+.resume-header .resume-contact .resume-header-label { margin-right: -12pt; }
+.resume-header h1 { font-family: var(--theme-font); font-size: inherit; line-height: inherit; font-weight: 700; letter-spacing: 0; color: var(--theme-link); margin: 0; }
+.resume-header address, .resume-header .resume-link-list { display: flex; flex-direction: column; gap: 0; font-family: var(--theme-font); font-size: inherit; font-style: normal; font-weight: 700; }
+.resume-header .resume-links { text-align: right; }
+.resume-header .resume-link-list { align-items: flex-end; }
+.resume-header a { max-width: 100%; overflow-wrap: anywhere; }
 .resume-header a { color: var(--theme-link); text-decoration: none; }
 .resume-header a:hover { color: var(--theme-link-hover); text-decoration: underline; }
 .resume-document h2 { margin: 4pt 0 2pt; padding-bottom: 1pt; border-bottom: .5pt solid var(--theme-border); font-family: var(--theme-font); font-size: 10.5pt; line-height: 1.1; letter-spacing: 0; font-weight: 700; text-transform: uppercase; color: var(--theme-link); }
@@ -27,8 +34,8 @@
 @media screen and (max-width: 850px) {
   .resume-document { font-size: 1rem; line-height: 1.45; }
   .resume-page, .resume-page + .resume-page { padding: 24px; min-height: auto; }
-  .resume-header h1 { font-size: 1.75rem; margin-bottom: 16px; }
-  .resume-header address { font-size: 1rem; gap: 8px; }
+  .resume-header { font-size: 1rem; }
+  .resume-header address, .resume-header .resume-link-list { gap: 4px; }
   .resume-document h2 { font-size: 1.1rem; margin-top: 20px; }
   .resume-document h3 { font-size: 1rem; }
   .resume-entry-heading em { font-size: .9rem; }
@@ -41,6 +48,13 @@
   .resume-coursework ul { padding: 0; }
   .resume-coursework ul + ul { margin-top: 6px; }
   .resume-document { overflow-wrap: anywhere; }
+}
+
+@media screen and (max-width: 600px) {
+  .resume-header { grid-template-columns: minmax(0, 1fr); row-gap: 16px; }
+  .resume-header .resume-contact .resume-header-label { margin-right: 0; }
+  .resume-header .resume-links { text-align: left; }
+  .resume-header .resume-link-list { align-items: flex-start; }
 }
 
 @page resume { size: letter; margin: .5in; }

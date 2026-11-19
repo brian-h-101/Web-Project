@@ -12,14 +12,22 @@ export function Resume() {
       <article className="resume-document" aria-label="Brian Ho résumé">
         <div className="resume-page" data-page="1">
           <header className="resume-header">
-            <h1>Brian Ho</h1>
-            <address>
-              <a href="tel:8133007419">813-300-7419</a><span aria-hidden="true"> | </span>
-              <a href="mailto:brianho101@gmail.com">brianho101@gmail.com</a><span aria-hidden="true"> | </span>
-              <a href="https://github.com/brian-h-101">github.com/brian-h-101</a>
-              <span aria-hidden="true"> | </span>
-              <a href="https://brianho101-portfolio.com/">brianho101-portfolio.com</a>
-            </address>
+            <div className="resume-contact">
+              <p className="resume-header-label">Contact</p>
+              <h1>Brian Ho</h1>
+              <address>
+                <span>Vienna, VA 22182</span>
+                <a href="tel:8133007419">813-300-7419</a>
+                <a href="mailto:brianho101@gmail.com">brianho101@gmail.com</a>
+              </address>
+            </div>
+            <div className="resume-links">
+              <p className="resume-header-label">Links</p>
+              <nav className="resume-link-list" aria-label="Résumé links">
+                <a href="https://brianho101-portfolio.com/">https://brianho101-portfolio.com/</a>
+                <a href="https://github.com/brian-h-101">github.com/brian-h-101</a>
+              </nav>
+            </div>
           </header>
           <section aria-labelledby="resume-profile">
             <h2 id="resume-profile">Professional Profile</h2>
